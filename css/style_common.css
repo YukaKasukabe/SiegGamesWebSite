@@ -1,0 +1,566 @@
+@charset "utf-8";
+
+/* リセット / ノーマライズ / サニタイズ */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin:0;
+  padding:0;
+  border:0;
+  outline:0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding-inline-start: 0;
+  font-size:100%;
+  vertical-align:baseline;
+  background:transparent;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+  display:block;
+}
+
+nav ul {
+  list-style:none;
+}
+
+blockquote, q {
+  quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content:'';
+  content:none;
+}
+
+a {
+  margin:0;
+  padding:0;
+  font-size:100%;
+  vertical-align:baseline;
+  background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+  text-decoration:none;
+}
+
+/* change colours to suit your needs */
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom:1px dotted;
+  cursor:help;
+}
+
+table {
+  border-collapse:collapse;
+  border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display:block;
+  height:1px;
+  border:0;   
+  border-top:1px solid #cccccc;
+  margin:1em 0;
+  padding:0;
+}
+
+input, select {
+  vertical-align:middle;
+}
+a {
+color: inherit;
+text-decoration: none;
+}
+
+li{
+  list-style: none;
+}
+/* ---------------------------------------- */
+
+
+/* body */
+body{
+  font-family: 'IBM Plex Sans JP','Kanit',sans-serif;
+  color: #ffffff;
+}
+
+.header-nav-inview a,
+.menu-nav-inview a{
+  font-family: 'Kanit',sans-serif;
+  font-weight: normal;
+}
+/* body end ---------------------------------------- */
+
+/* content */
+.content{
+  margin: 0 8%;
+}
+
+/* content end ---------------------------------------- */
+
+/* header */
+.header{
+  position: fixed;
+  width: 100%;
+  height: 150px;
+  justify-content: space-between;
+  top: 0;
+  z-index: 1000;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  border-bottom: 1px solid #ffffff50;
+}
+@media screen and (max-width: 959px){
+  .header {
+    height: 150px;
+    }
+}
+@media screen and (max-width: 480px){
+  .header {
+    height: 80px;
+    }
+}
+
+.header-content{
+  display: flex;
+  margin-top: 70px;
+  height: 60px;
+  align-items: center;
+}
+@media screen and (max-width: 959px){
+  .header-content {
+    margin-top: 70px;
+    }
+}
+@media screen and (max-width: 480px){
+  .header-content {
+    margin-top: 15px;
+    }
+}
+.header-logo{
+  margin-right: auto;
+}
+.header-logo img {
+  width: 200px;
+  height: auto;
+}
+@media screen and (max-width: 959px){
+  .header-logo img {
+    width: 200px;
+    }
+}
+@media screen and (max-width: 480px){
+  .header-logo img {
+    width: 150px;
+    }
+}
+
+
+/* header end ---------------------------------------- */
+
+/* header nav */
+.header-nav-inview{
+  padding-right: 80px;
+}
+.header-nav-content ul{
+  display: flex; 
+  justify-content: center;
+}
+.header-nav-inview li a{
+  display: block;
+  position: relative;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  width: 100px;
+  color: #ffffff;
+  padding:10px 25px;
+  transition:all 0.3s;
+  z-index: 3; 
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+@media screen and (max-width: 959px){
+  .header-nav-inview li a {
+    display: none;
+    }
+}
+@media screen and (max-width: 480px){
+  .header-nav-inview li a {
+    display: none;
+    }
+}
+.header-nav-inview li.current a,
+.header-nav-inview li a:hover{
+  color: #ffffff;
+  font-weight: 500;
+}
+.header-nav-inview li a::after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 15%;
+  width: 70%;
+  height: 2px;
+  background: #F5D523;
+  transition: all 0.4s;
+  transform: scale(0, 1);/*X方向0、Y方向1*/
+  transform-origin: left top;/*左上基点*/
+}
+.header-nav-inview li a::after:before{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 15%;
+  width: 70%;
+  height: 4px;
+  background: #2B2925;
+  transition: all 0.4s;
+  transform: scale(0, 1);/*X方向0、Y方向1*/
+  transform-origin: left top;/*左上基点*/
+}
+
+.header-nav-inview li.current a::after,
+.header-nav-inview li a:hover::after {
+    transform: scale(1, 1);/*X方向にスケール拡大*/
+}
+/* header nav end ---------------------------------------- */
+
+
+/* footer */
+.footer{
+  position: relative;
+  height: 150px;
+  border-top: 1px solid #ffffff50;
+  /* backdrop-filter: blur(5px); */
+  /* background-color: #ffffff90; */
+}
+/* ページトップリンク */
+.pagetop-button{
+  position: absolute;
+  bottom: 280px;  
+  right: 8%;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 1px solid #ffffff50;
+  cursor: pointer;  
+  transition:all 0.3s;
+  z-index: 100;
+}
+.pagetop-button:hover{
+  width: 60px;
+  height: 60px;
+  background-color: #ffffff;
+}
+.pagetop-button span{
+  display: block;
+  width: 12px;
+  height: 12px;
+  border: 0px;
+  border-top: solid 3px #ffffff;
+  border-right: solid 3px #ffffff;
+  transform: rotate(-45deg); /* 右向きの場合 */
+  position: absolute;
+  top: 24px;
+  left: 23px;
+  animation: ArrowUpMove 1s ease-in-out infinite;
+}
+@keyframes ArrowUpMove{
+  0%{top: 24px;}
+  50%{top: 28px;}
+ 100%{top: 24px;}
+}
+.pagetop-button:hover span{
+  border-top: solid 4px #2B2925;
+  border-right: solid 4px #2B2925;
+}
+
+.footer-copy{
+  color: #ffffff;
+  display: block;
+  text-align: center;
+  font-size: 12px;
+  padding: 10px 0 0 0;
+}
+.footer-content{
+  align-items: center;
+  display: flex;
+  flex-wrap: nowrap;
+}
+.footer-socials{
+  display: flex;
+  justify-content: flex-start;
+}
+.social-icons img{
+  width: 32px;
+  margin-right: 40px;
+}
+.footer-contact{
+  margin-left: auto;
+  position: relative;
+}
+
+@media screen and (max-width: 959px){
+ }
+@media screen and (max-width: 480px){
+  .footer-contact,.footer-socials{
+    display: none;
+
+  }
+ }
+/* ---------------------------------------- */
+
+/* ---------------------------------------- */
+
+
+/* button */
+.button {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  width: 140px;
+  height: 24px;
+  border-radius: 24px;
+  font-size: 14px;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 2px;
+  padding: 10px;
+  outline: none;
+  transition: ease .2s;
+  z-index: 10;
+  cursor: pointer;
+}
+.button span{
+  position: relative;
+  z-index: 3; 
+}
+/* .button:hover span {
+} */
+.button:before {  
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  transition: transform .6s cubic-bezier(0.8, 0, 0.2, 1) 0s;
+  transform: scale(0, 1);
+  transform-origin: right top;
+}
+.button:hover:before{
+  transform-origin:left top;
+  transform:scale(1, 1);
+}
+/* ボタン ブラック */
+.button-black{ 
+  border: 1px solid #2B2925;
+}
+.button-black span{
+  color:  #2B2925;
+}
+.button-black:hover span{
+  color: #ffffff;
+}
+.button-black:before {  
+  background:#2B2925;
+}
+/* ボタン  ホワイト */
+.button-white{ 
+  border: 1px solid #ffffff50;
+}
+.button-white span{
+  color:  #ffffff;
+}
+.button-white:hover span{
+  color: #2B2925;
+}
+.button-white:before {  
+  background: #F5D523;
+  border: 1px solid #ffffff50;
+}
+/* ボタン  イエロー */
+.button-yellow{ 
+  background: #F5D523;
+  border: 1px solid #ffffff50;
+}
+.button-yellow span{
+  color: #2B2925;
+}
+.button-yellow:hover span{
+  color: #ffffff;
+}
+.button-yellow:before {  
+  background: #2B2925;
+  border: 1px solid #ffffff50;
+}
+/* ---------------------------------------- */
+
+
+/* 共通表示アニメーション */
+.fadeUp{
+  animation-name:fadeUpAnime;
+  animation-duration:0.6s;
+  animation-fill-mode:forwards;
+  opacity:0;
+  }
+  @keyframes fadeUpAnime{
+    from {
+      opacity: 0;
+    transform: translateY(100px);
+    }
+  
+    to {
+      opacity: 1;
+    transform: translateY(0);
+    }
+  }
+.fadeIn{
+  animation-name:fadeInAnime;
+  animation-duration:0.6s;
+  animation-fill-mode:forwards;
+  opacity:0;
+  }
+  
+  @keyframes fadeInAnime{
+    from {
+      opacity: 0;
+      transform: translateY(-100px);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .fadeOut{
+    animation-name:fadeOutAnime;
+    animation-duration:0.6s;
+    animation-fill-mode:forwards;
+    opacity:1;
+    }
+    @keyframes fadeOutAnime{
+      from {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      to {
+        opacity: 0;
+        transform: translateY(-100px);
+      }
+    }
+/* ---------------------------------------- */
+
+/* キャッチコピー全体表示アニメーション */
+.bg-extend{
+	animation-name:bgextendAnimeBase;
+	animation-duration:0.1s;
+	animation-fill-mode:forwards;
+	position: relative;
+	overflow: hidden;/* はみ出た色要素を隠す */
+	opacity:0;
+  top: 0px;
+}
+@keyframes bgextendAnimeBase{
+  from {
+    opacity:0;
+  }
+  to {
+    opacity:1;  
+}
+}
+.bg-appear{
+	animation-name:bgextendAnimeSecond;
+	animation-duration: 0.3s;
+	animation-delay: 0.8s;
+	animation-fill-mode:forwards;
+	opacity: 0;
+  /* text-align: center; */
+  padding: 0 12px;
+}
+@keyframes bgextendAnimeSecond{
+	0% {
+	opacity: 0;
+  /* color: #2B2925; */
+	}
+	100% {
+	opacity: 1;
+  /* color: #ffffff; */
+}
+}
+/* テキスト背景アニメーション 左から右 */
+.bg-LRextend::before{
+  animation-name:bgLRextendAnime;
+	animation-duration:0.8s;
+	animation-fill-mode:forwards;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  background-color: #2B2925;
+}
+@keyframes bgLRextendAnime{
+	0% {
+		transform-origin:left;
+		transform:scaleX(0);
+	}
+	100% {
+		transform-origin:left;
+		transform:scaleX(1);
+	}
+}
+.bg-extend-anim{
+  animation-name:extendAnime;
+  animation-duration:1.6s;
+  animation-delay: 0s;
+  animation-fill-mode:forwards;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+@keyframes extendAnime{
+	0% {
+		transform-origin:left;
+		transform:scaleX(0);
+	}
+	50% {
+		transform-origin:left;
+		transform:scaleX(1);
+	}
+	50.001% {
+		transform-origin:right;
+	}
+	100% {
+		transform-origin:right;
+		transform:scaleX(0);
+	}
+}
+.bg-appear-trigger,
+.bg-LRextend-trigger{
+    opacity: 0;
+}
+/* ---------------------------------------- */

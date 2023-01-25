@@ -1,0 +1,262 @@
+@charset "utf-8";
+
+/* 表示領域 */
+body{
+  background-color: #2B2925;
+  overflow: visible;
+}
+/* ---------------------------------------- */
+
+/* フォント設定  ---------------------------------------- */
+h2,h3,h4,p,a{
+  font-family: 'IBM Plex Sans JP',sans-serif;
+  font-weight: normal;
+}
+h1,text,.section-label-bottom,.section-label-back{
+  font-family: 'Kanit',sans-serif;
+  font-weight: normal;
+}
+/* ---------------------------------------- */
+
+/* ---------------------------------------- */
+
+/* トップ画像 */
+.hero-image-slider{
+  width: 100vw;
+  height: 400px;
+  overflow: hidden;
+  z-index: -1;
+}
+@media screen and (max-width: 959px){
+  .hero-image-slider {
+    height: 400px;
+    }
+}
+@media screen and (max-width: 480px){
+  .hero-image-slider {
+    height: 300px;
+    }
+}
+.top-label{
+  position: absolute;
+  font-size: 100px;
+  font-weight: 400;
+  bottom: 0;
+  right: 96px;
+  color: #ffffff;
+}
+@media screen and (max-width: 959px){
+  .top-label {
+    font-size: 100px;
+    right: 96px;
+    }
+}
+@media screen and (max-width: 480px){
+  .top-label {
+    font-size: 48px;
+    right: 24px;
+    }
+}
+
+/* ---------------------------------------- */
+
+/* セクション タイトル */
+.section-label-content{
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 160px;
+  margin: 0 auto;
+  margin-top: 50px;
+  overflow: hidden;
+}
+@media screen and (max-width: 959px){
+  .section-label-content {
+    height: 160px;
+  }
+}
+@media screen and (max-width: 480px){
+  .section-label-content {
+    height: 136px;
+    margin-top: 0;
+
+  }
+}
+.section-label{
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 160px;
+  text-align: center;
+}
+.section-label-top{
+  position: absolute;
+  width: 100%;
+  font-size: 22px;
+  font-weight: 500;
+  color: #F5D523;
+  letter-spacing: 6px;
+  line-height: 30px;
+  border-bottom: 1px solid #907F24;
+  padding: 2px 0;
+  text-align: center;
+  top: 52%;
+  z-index: 1;
+  overflow: hidden;
+}
+@media screen and (max-width: 959px){
+  .section-label-top {
+    font-size: 22px;
+    letter-spacing: 6px;
+  }
+}
+@media screen and (max-width: 480px){
+  .section-label-top {
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 2px;
+  }
+}
+.section-label-bottom{
+  position: absolute;
+  width: 100%;
+  top: 76%;
+  font-size: 16px;
+  font-weight: 500;
+  color: #F5D523;
+  letter-spacing: 3px;
+  z-index: 1;
+}
+@media screen and (max-width: 959px){
+  .section-label-bottom {
+    font-size: 16px;
+    letter-spacing: 6px;
+  }
+}
+@media screen and (max-width: 480px){
+  .section-label-bottom {
+    font-size: 14px;
+    top: 110px;
+    letter-spacing: 2px;
+  }
+}
+.section-label-back{
+  position: absolute;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  letter-spacing: 10px;
+  font-size: 160px;
+  font-weight: 500;
+  color: #3F3D3A;
+  line-height: 140px;
+  letter-spacing: 14px;
+  text-align: center;
+  top: 25%;
+}
+@media screen and (max-width: 959px){
+  .section-label-back {
+    font-size: 160px;
+    letter-spacing: 6px;
+  }
+}
+@media screen and (max-width: 480px){
+  .section-label-back {
+    font-size: 110px;
+    top: 30px;
+    letter-spacing: 2px;
+  }
+}
+.section-label-back::before{
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 16px;
+  background-color: #2B2925;
+  top: 50px;
+}
+@media screen and (max-width: 959px){
+  .section-label-back::before {
+    height: 16px;
+  }
+}
+@media screen and (max-width: 480px){
+  .section-label-back::before {
+    height: 10px;
+    top: 60px;
+  }
+}
+
+/* ---------------------------------------- */
+/* 社名横スクロールアニメーション*/
+.label-sieggames-loop{
+  display: block;
+  width: 100%;
+  height: 100px;
+  margin-top: 150px;
+  overflow: visible;
+}
+/* ラベル表示領域 */
+.label-sieggames-loop-inview{
+  width: 100%;
+  height: 100px;
+  overflow: visible;
+} 
+/* アウトライン設定 */
+.label-sieggames-text{
+  font-size: 8.75rem;
+  fill: #ffffff;
+  fill-opacity: 0;
+  stroke: #ffffff50;
+  stroke-width: 0.5;
+  stroke-linejoin: round;
+  animation : labelscroll 60s linear infinite;
+}
+@keyframes labelscroll{
+  0% { transform: translateX(0)}
+  100% { transform: translateX(-100%)}
+}
+/* ---------------------------------------- */
+
+/* 共通設定 */
+.massege-section{
+  display: block;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.massege-content{
+  display: block;
+  width: 100%;
+  height: 600px;
+  background: #3F3D3A;
+  padding: 80px 0;
+  margin: 0 auto;
+}
+/* ---------------------------------------- */
+
+/* メッセージ */
+.president-message{
+  width: 100%;
+  height: 100%;
+}
+.president-message-content{
+  width: 100%;
+  height: 100%;
+}
+.president-message-inview{
+  width: 100%;
+  height: 100%;
+
+}
+.president-message-text{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  font-size: 40px;
+  letter-spacing: 2px;
+  color: #ffffff50;
+}  
+/* ---------------------------------------- */
