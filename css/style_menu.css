@@ -149,7 +149,7 @@
   bottom: 0;
   background: #F5D523;
 	transition: all 0.6s;
-  z-index: 9999;
+  z-index: 10000;
   
 }
 .menu-content.panelactive{
