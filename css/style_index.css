@@ -15,7 +15,8 @@ header,h2,text,.menu-nav{
   /*fixedで全面に固定*/
     position: fixed;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh; /* Fallback */
+    min-height: calc(var(--vh, 1vh) * 100);
     top: 0;
     bottom: 0;
     left: 0;
@@ -79,7 +80,8 @@ body.appear .splash-bg{
   position:fixed;
   z-index: 999;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh; /* Fallback */
+  min-height: calc(var(--vh, 1vh) * 100);
   top: 0;
   left: 0;
   transform: scaleX(0);
@@ -196,10 +198,12 @@ body{
 .index-main-content{
   width: 100%;
   height: auto;
+  /* overflow: hidden; */
 }
 .index-section{
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh; /* Fallback */
+  min-height: calc(var(--vh, 1vh) * 100);
  }
 
 .index-content{
@@ -307,7 +311,8 @@ body{
 .index-top-content{
   position: relative;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh; /* Fallback */
+  min-height: calc(var(--vh, 1vh) * 100);
   margin: 0 8%;
 }
 @media screen and (max-width: 959px){
@@ -389,9 +394,8 @@ body{
 .index-grid-content {
   position: relative;
   width: 100%;
-  height: 100vh;
-  /* min-height: 100vh;
-  min-height: calc(var(--vh, 1vh) * 100); */
+  min-height: 100vh; /* Fallback */
+  min-height: calc(var(--vh, 1vh) * 100);
 }
 @media screen and (max-width: 959px){
 
