@@ -111,7 +111,7 @@ $(window).on('load', function(){
 //スクロールした際の動きを関数でまとめる
 function PageTopCheck(){
 	var winScrollTop = $(this).scrollTop();
-	var secondTop =  $(".index-partner-section").offset().top - 150; //#area-2の上から150pxの位置まで来たら
+	var secondTop =  $(".footer").offset().top - 0; //#area-2の上から150pxの位置まで来たら
 	if(winScrollTop >= secondTop){
 	$('.page-top').removeClass('scroll-view');//.js-scrollからscroll-viewというクラス名を除去
 	$('.page-down').addClass('scroll-view');//.js-pagetopにscroll-viewというクラス名を付与
