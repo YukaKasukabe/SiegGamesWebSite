@@ -8,22 +8,15 @@ $(function() {
     var dispHeight = $(window).height(); // 表示領域の高さ
   
     if(point > docHeight-dispHeight-footer){ // スクロール地点>ドキュメントの高さ-表示領域-footerの高さ
-      $('.header,.scroller').addClass('fadeOut'); //footerより下にスクロールしたらis-hiddenを追加
+      $('.header').addClass('fadeOut'); //footerより下にスクロールしたらis-hiddenを追加
     }else{
-      $('.header,.scroller').removeClass('fadeOut'); //footerより上にスクロールしたらis-hiddenを削除
+      $('.header').removeClass('fadeOut'); //footerより上にスクロールしたらis-hiddenを削除
     }
   };
   });
 /* ------------------------------------------------------------------ */
 
-// ページトップリンク
-$('.scroll-top').click(function () {
-	$('body,html').animate({
-			scrollTop: 0//ページトップまでスクロール
-	}, 500);//ページトップスクロールの速さ。数字が大きいほど遅くなる
-	return false;//リンク自体の無効化
-});
-/* ------------------------------------------------------------------ */
+
 
 /*  フェードインアニメーション */
 function delayScrollAnime() {
@@ -115,3 +108,38 @@ $(window).on('load', function(){
 });// ここまで画面が読み込まれたらすぐに動かしたい場合の記述
 /* ------------------------------------------------------------------ */
 
+//スクロールした際の動きを関数でまとめる
+function PageTopCheck(){
+	var winScrollTop = $(this).scrollTop();
+	var secondTop =  $(".index-partner-section").offset().top - 150; //#area-2の上から150pxの位置まで来たら
+	if(winScrollTop >= secondTop){
+	$('.page-top').removeClass('scroll-view');//.js-scrollからscroll-viewというクラス名を除去
+	$('.page-down').addClass('scroll-view');//.js-pagetopにscroll-viewというクラス名を付与
+} else {//元に戻ったら
+	$('.page-top').addClass('scroll-view');//.js-scrollからscroll-viewというクラス名を付与
+	$('.page-down').removeClass('scroll-view');//.js-pagetopからscroll-viewというクラス名を除去
+}
+
+}
+
+//クリックした際の動き
+$('.scroll-top').click(function () {
+var elmHash = $(this).attr('href'); //hrefの内容を取得
+if (elmHash == ".index-partner-section") {//もし、リンク先のhref の後が#area-2の場合
+	var pos = $(elmHash).offset().top;
+	$('body,html').animate({scrollTop: pos}, pos); //#area-2にスクロール
+}else{
+	$('body,html').animate({scrollTop: 0}, 500); //それ以外はトップへスクロール。数字が大きくなるほどゆっくりスクロール
+}
+	return false;//リンク自体の無効化
+});
+
+// 画面をスクロールをしたら動かしたい場合の記述
+$(window).scroll(function () {
+PageTopCheck();/* スクロールした際の動きの関数を呼ぶ*/
+});
+
+// ページが読み込まれたらすぐに動かしたい場合の記述
+$(window).on('load', function () {
+PageTopCheck();/* スクロールした際の動きの関数を呼ぶ*/
+});

@@ -14,8 +14,9 @@ header,h2,text,.menu-nav{
 .splash {
   /*fixedで全面に固定*/
     position: fixed;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    min-height: 100vh; /* Fallback */
+    min-height: calc(var(--vh, 1vh) * 100);
     top: 0;
     bottom: 0;
     left: 0;
@@ -78,7 +79,8 @@ body.appear .splash-bg{
   position:fixed;
   z-index: 999;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh; /* Fallback */
+  min-height: calc(var(--vh, 1vh) * 100);
   top: 0;
   left: 0;
   transform: scaleX(0);
@@ -177,14 +179,16 @@ body{
 .video-overlay{
   position: absolute;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh; /* Fallback */
+  min-height: calc(var(--vh, 1vh) * 100);
   z-index: -5;
   transition: 0.5s;
 }
 .video-overlay-end{
   position: absolute;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh; /* Fallback */
+  min-height: calc(var(--vh, 1vh) * 100);
   backdrop-filter: blur(10px);
   z-index: -5;
   background-color:#000000c0;
@@ -199,12 +203,14 @@ body{
 }
 .index-section{
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh; /* Fallback */
+  min-height: calc(var(--vh, 1vh) * 100);
  }
 
 .index-content{
   width: 100%;
-  height: 100vh;
+  min-height: 100vh; /* Fallback */
+  min-height: calc(var(--vh, 1vh) * 100);
 
 }
 @media screen and (max-width: 959px){
@@ -216,7 +222,7 @@ body{
 @media screen and (max-width: 480px){
   .index-content {
     flex-direction: column;
-    height: 100%;
+    /* height: 100%; */
     }
 }
 /* ---------------------------------------- */
@@ -306,8 +312,9 @@ body{
 /* top   ---------------------------------------- */
 .index-top-content{
   position: relative;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  min-height: 100vh; /* Fallback */
+  min-height: calc(var(--vh, 1vh) * 100);
   margin: 0 8%;
 }
 @media screen and (max-width: 959px){
@@ -389,7 +396,8 @@ body{
 .index-grid-content {
   position: relative;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh; /* Fallback */
+  min-height: calc(var(--vh, 1vh) * 100);
 }
 @media screen and (max-width: 959px){
 
@@ -731,13 +739,15 @@ body{
 .label-loop{
   position: fixed;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh; /* Fallback */
+  min-height: calc(var(--vh, 1vh) * 100);
   top: 88%;
 }
 /* 表示領域 */
 .label-loop-inview{
   width: 100%;
-  height: 100vh;
+  min-height: 100vh; /* Fallback */
+  min-height: calc(var(--vh, 1vh) * 100);
   overflow: visible;
 }  
 /* アウトライン設定 */
@@ -767,78 +777,3 @@ body{
 }
 /* ---------------------------------------- */
 
-/* スクロールガイド */
-.scroll-down{
-  position: fixed;
-  bottom: 80px;  
-  right: 8%;
-  left: auto;
-  align-items: center;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  border: 1px solid #ffffff50;
-  transition:all 0.3s;
-  z-index: 100;
-}
-.scroll-down span{
-  display: block;
-  width: 12px;
-  height: 12px;
-  border: 4px;
-  border-top: solid 3px #ffffff;
-  border-right: solid 3px #ffffff;
-  transform: rotate(135deg); /* 右向きの場合 */
-  position: absolute;
-  top: 24px;
-  left: 23px;
-  animation: ArrowDownMove 1s ease-in-out infinite;
-  transition: all .3s;
-}
-@keyframes ArrowDownMove{
-      0%{top: 20px;}
-      50%{top: 24px;}
-     100%{top: 20px;}
- }
-.scroll-down::after,
-.scroll-down::before {
-  content: '';
-  /*絶対配置で波形の位置を決める*/
-  position: absolute;
-  left: -116%;
-  top: -116%;
-  /*波形の形状*/
-  border: 40px solid #ffffff;
-  width: 200%;
-  height: 200%;
-  border-radius: 50%;
-  /*はじめは不透明*/
-  opacity: 0;
-  /*ループするアニメーションの設定*/
-  /* animation:2s circleanime linear infinite; */
-}
-.scroll-down::before {
-animation-delay: 0.4s; 
-}
-
-/*波形のアニメーション*/
-@keyframes circleanime{
-0%{
-  transform: scale(0);
-  opacity: 0;
-}
-5%{
-  transform: scale(0.1);
-  opacity: 0.1;
-}
-80%{
-  transform: scale(0.8);
-  opacity: 0.3;
-}
-100%{
-  transform: scale(1);
-  opacity: 0;
-}
-}
-
-/* ---------------------------------------- */
