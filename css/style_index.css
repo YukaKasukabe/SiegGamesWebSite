@@ -73,6 +73,7 @@ header,h2,text,.menu-nav{
 .splash-bg{
   display: none;
   }
+
 body.appear .splash-bg{
   display: block;
   content: "";
@@ -178,17 +179,15 @@ body{
 /* スクロールしたら背景を暗くする */
 .video-overlay{
   position: absolute;
-  width: 100vw;
-  min-height: 100vh; /* Fallback */
-  min-height: calc(var(--vh, 1vh) * 100);
+  width: 100%;
+  height: 100%;
   z-index: -5;
   transition: 0.5s;
 }
 .video-overlay-end{
   position: absolute;
-  width: 100vw;
-  min-height: 100vh; /* Fallback */
-  min-height: calc(var(--vh, 1vh) * 100);
+  width: 100%;
+  height: 100%;
   backdrop-filter: blur(10px);
   z-index: -5;
   background-color:#000000c0;
@@ -209,8 +208,7 @@ body{
 
 .index-content{
   width: 100%;
-  min-height: 100vh; /* Fallback */
-  min-height: calc(var(--vh, 1vh) * 100);
+  height: 100%;
 
 }
 @media screen and (max-width: 959px){
@@ -459,7 +457,7 @@ body{
   }
   @media screen and (max-width: 480px){
     .index-creator-inview,.index-works-inview{
-      width: 100vw;
+      width: 100%;
       height: auto
       }
     .index-creator-inview{
@@ -739,15 +737,13 @@ body{
 .label-loop{
   position: fixed;
   width: 100%;
-  min-height: 100vh; /* Fallback */
-  min-height: calc(var(--vh, 1vh) * 100);
+  height: 100px;
   top: 88%;
 }
 /* 表示領域 */
 .label-loop-inview{
   width: 100%;
-  min-height: 100vh; /* Fallback */
-  min-height: calc(var(--vh, 1vh) * 100);
+  height: 100px;
   overflow: visible;
 }  
 /* アウトライン設定 */
@@ -758,7 +754,7 @@ body{
   stroke: #ffffff50;
   stroke-width: 0.5;
   stroke-linejoin: round;
-  animation : labelscroll 50s linear infinite;
+  animation : labelscroll 60s linear infinite;
 }
 @keyframes labelscroll{
   0% { transform: translateX(0)}
