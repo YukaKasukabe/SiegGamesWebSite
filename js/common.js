@@ -8,21 +8,20 @@ $(function() {
     var dispHeight = $(window).height(); // 表示領域の高さ
   
     if(point > docHeight-dispHeight-footer){ // スクロール地点>ドキュメントの高さ-表示領域-footerの高さ
-      $('.header').addClass('fadeOut'); //footerより下にスクロールしたらis-hiddenを追加
+      $('.header,.page-down').addClass('fadeOut'); //footerより下にスクロールしたらis-hiddenを追加
     }else{
-      $('.header').removeClass('fadeOut'); //footerより上にスクロールしたらis-hiddenを削除
+      $('.header,.page-down').removeClass('fadeOut'); //footerより上にスクロールしたらis-hiddenを削除
     }
   };
   });
 /* ------------------------------------------------------------------ */
 
 
-
-/*  フェードインアニメーション */
+// フェードアップアニメーション
 function delayScrollAnime() {
-	var time = 0.5;//遅延時間を増やす秒数の値
+	var time = 0.2;//遅延時間を増やす秒数の値
 	var value = time;
-	$('.fadeInAnime').each(function () {
+	$('.fadeAnime').each(function () {
 		var parent = this;					//親要素を取得
 		var elemPos = $(this).offset().top;//要素の位置まで来たら
 		var scroll = $(window).scrollTop();//スクロール値を取得
@@ -52,6 +51,16 @@ function delayScrollAnime() {
 		}
 	})
 }
+
+// 画面をスクロールをしたら動かしたい場合の記述
+	$(window).scroll(function (){
+		delayScrollAnime();/* アニメーション用の関数を呼ぶ*/
+	});// ここまで画面をスクロールをしたら動かしたい場合の記述
+
+// 画面が読み込まれたらすぐに動かしたい場合の記述
+	$(window).on('load', function(){
+		delayScrollAnime();/* アニメーション用の関数を呼ぶ*/
+	});// ここ
 
 /* ------------------------------------------------------------------ */
 
@@ -109,37 +118,37 @@ $(window).on('load', function(){
 /* ------------------------------------------------------------------ */
 
 //スクロールした際の動きを関数でまとめる
-function PageTopCheck(){
-	var winScrollTop = $(this).scrollTop();
-	var secondTop =  $(".footer").offset().top - 0; //#area-2の上から150pxの位置まで来たら
-	if(winScrollTop >= secondTop){
-	$('.page-top').removeClass('scroll-view');//.js-scrollからscroll-viewというクラス名を除去
-	$('.page-down').addClass('scroll-view');//.js-pagetopにscroll-viewというクラス名を付与
-} else {//元に戻ったら
-	$('.page-top').addClass('scroll-view');//.js-scrollからscroll-viewというクラス名を付与
-	$('.page-down').removeClass('scroll-view');//.js-pagetopからscroll-viewというクラス名を除去
-}
+// function PageTopCheck(){
+// 	var winScrollTop = $(this).scrollTop();
+// 	var secondTop =  $(".footer").offset().top - 0; //#area-2の上から150pxの位置まで来たら
+// 	if(winScrollTop >= secondTop){
+// 	$('.page-top').removeClass('scroll-view');//.js-scrollからscroll-viewというクラス名を除去
+// 	$('.page-down').addClass('scroll-view');//.js-pagetopにscroll-viewというクラス名を付与
+// } else {//元に戻ったら
+// 	$('.page-top').addClass('scroll-view');//.js-scrollからscroll-viewというクラス名を付与
+// 	$('.page-down').removeClass('scroll-view');//.js-pagetopからscroll-viewというクラス名を除去
+// }
 
-}
+// }
 
 //クリックした際の動き
-$('.scroll-top').click(function () {
-var elmHash = $(this).attr('href'); //hrefの内容を取得
-if (elmHash == ".index-partner-section") {//もし、リンク先のhref の後が#area-2の場合
-	var pos = $(elmHash).offset().top;
-	$('body,html').animate({scrollTop: pos}, pos); //#area-2にスクロール
-}else{
-	$('body,html').animate({scrollTop: 0}, 500); //それ以外はトップへスクロール。数字が大きくなるほどゆっくりスクロール
-}
-	return false;//リンク自体の無効化
-});
+// $('.scroll-top').click(function () {
+// var elmHash = $(this).attr('href'); //hrefの内容を取得
+// if (elmHash == ".index-partner-section") {//もし、リンク先のhref の後が#area-2の場合
+// 	var pos = $(elmHash).offset().top;
+// 	$('body,html').animate({scrollTop: pos}, pos); //#area-2にスクロール
+// }else{
+// 	$('body,html').animate({scrollTop: 0}, 500); //それ以外はトップへスクロール。数字が大きくなるほどゆっくりスクロール
+// }
+// 	return false;//リンク自体の無効化
+// });
 
-// 画面をスクロールをしたら動かしたい場合の記述
-$(window).scroll(function () {
-PageTopCheck();/* スクロールした際の動きの関数を呼ぶ*/
-});
+// // 画面をスクロールをしたら動かしたい場合の記述
+// $(window).scroll(function () {
+// PageTopCheck();/* スクロールした際の動きの関数を呼ぶ*/
+// });
 
-// ページが読み込まれたらすぐに動かしたい場合の記述
-$(window).on('load', function () {
-PageTopCheck();/* スクロールした際の動きの関数を呼ぶ*/
-});
+// // ページが読み込まれたらすぐに動かしたい場合の記述
+// $(window).on('load', function () {
+// PageTopCheck();/* スクロールした際の動きの関数を呼ぶ*/
+// });

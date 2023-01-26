@@ -474,10 +474,6 @@ body{
   right: 8%;
   cursor: pointer;  
   z-index: 2;
-  	/*はじめは非表示*/
-	opacity: 0;
-	visibility: hidden; 
-	transition: opacity .5s, visibility .5s; /*それぞれに0.5秒の変化のアニメーション*/
   /* 形状 */
   width: 60px;
   height: 60px;
@@ -485,10 +481,10 @@ body{
   border: 1px solid #ffffff50;
 }
 /*.scroll-viewクラスがついたら出現*/
-.scroll-top .scroll-view {
+/* .scroll-top .scroll-view {
 	opacity: 1;
 	visibility: visible;
-}
+} */
 
 .page-top span{
   display: block;
@@ -678,6 +674,9 @@ animation-delay: 0.4s;
 
 
 /* 共通表示アニメーション */
+.fadeUpAnime{
+  opacity: 0;
+}
 .fadeUp{
   animation-name:fadeUpAnime;
   animation-duration:0.6s;
@@ -713,22 +712,22 @@ animation-delay: 0.4s;
       transform: translateY(0);
     }
   }
-  .fadeOut{
-    animation-name:fadeOutAnime;
-    animation-duration:0.6s;
-    animation-fill-mode:forwards;
-    opacity:1;
+.fadeOut{
+  animation-name:fadeOutAnime;
+  animation-duration:0.6s;
+  animation-fill-mode:forwards;
+  opacity:1;
+  }
+  @keyframes fadeOutAnime{
+    from {
+      opacity: 1;
+      transform: translateY(0);
     }
-    @keyframes fadeOutAnime{
-      from {
-        opacity: 1;
-        transform: translateY(0);
-      }
-      to {
-        opacity: 0;
-        transform: translateY(-100px);
-      }
+    to {
+      opacity: 0;
+      transform: translateY(-100px);
     }
+  }
 /* ---------------------------------------- */
 
 /* キャッチコピー全体表示アニメーション */
