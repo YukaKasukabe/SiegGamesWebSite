@@ -205,24 +205,6 @@ body{
   min-height: 100vh; /* Fallback */
   min-height: calc(var(--vh, 1vh) * 100);
  }
-
-.index-content{
-  width: 100%;
-  height: 100%;
-
-}
-@media screen and (max-width: 959px){
-  .index-content {
-    font-size: 24px;
-    letter-spacing: 0;
-    }
-}
-@media screen and (max-width: 480px){
-  .index-content {
-    flex-direction: column;
-    /* height: 100%; */
-    }
-}
 /* ---------------------------------------- */
 
 /* セクション内共通テキスト ---------------------------------------- */
@@ -242,8 +224,8 @@ body{
 @media screen and (max-width: 480px){
   .index-title {
     width: 100%;
-    font-size: 18px;
-    margin-bottom: 2px;
+    font-size: 16px;
+    margin-bottom: 4px;
     }
 }
 .index-catchcopy h3{
@@ -261,9 +243,10 @@ body{
 }
 @media screen and (max-width: 480px){
   .index-catchcopy h3 {
-    width: 100%;
+    width: 90vw;
     font-size: 18px;
-    letter-spacing: 0;
+    letter-spacing: 2px;
+    margin-bottom: 6px;
     }
 }
 .index-catchcopy-en{
@@ -283,9 +266,11 @@ body{
 }
 @media screen and (max-width: 480px){
   .index-catchcopy-en {
-    width: 100%;
-    font-size: 14px;
-    letter-spacing: 0;
+    width: 90vw;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
     }
 }
 .index-catchcopy-en::before{
@@ -293,6 +278,11 @@ body{
   background: #ffffff50;
   height: 1px;
   width: 100%;
+}
+@media screen and (max-width: 480px){
+  .index-catchcopy-en::before {
+    width: 90vw;
+    }
 }
 .index-text-title{
   width: 100%;
@@ -384,8 +374,8 @@ body{
 }
 @media screen and (max-width: 480px){
   .index-top-catchcopy-en {
-    font-size: 14px;
-    letter-spacing: 0;
+    font-size: 12px;
+    letter-spacing: 1px;
     }
 }
 /* ---------------------------------------- */
@@ -401,9 +391,16 @@ body{
 
 }
 @media screen and (max-width: 480px){
-
+  .index-grid-content{
+    width: 100vw;
+  }
+  .index-partner-section{
+    height: 225vh;
+  }
+  .index-partner-content{
+    height: 225vh;
+  }
 }
-
 .index-grid-inview{
   position: absolute;
   display: grid;
@@ -424,7 +421,8 @@ body{
     grid-gap: 5px;
     width: 100%;
     height: auto;
-    margin: 0;
+    grid-template-rows: auto;
+    /* margin: 0 16px; */
     }
 }
 
@@ -451,12 +449,12 @@ body{
   "area3 area3";
 }
   @media screen and (max-width: 959px){
-    .index-creator-inview{
+    /* .index-creator-inview{
       height: 60%;
-      }
+      } */
   }
   @media screen and (max-width: 480px){
-    .index-creator-inview,.index-works-inview{
+    .index-creator-inview,.index-works-inview,.index-partner-inview{
       width: 100%;
       height: auto
       }
@@ -472,22 +470,28 @@ body{
         "area1 area1"
         "area3 area3";
       }
+    .index-partner-inview{
+      grid-template-areas:
+        "area1 area1"
+        "area3 area3";
+      }
   }
 
-.index-text-conten{
+.index-text-content{
   width: 600px;
   height: 230px;
   grid-row: 1;
   grid-column: 1;
 }
 @media screen and (max-width: 959px){
-  .index-text-conten{
+  .index-text-content{
     width: 600px;
     }
 }
 @media screen and (max-width: 480px){
-  .index-text-conten{
+  .index-text-content{
     width: 100%;
+    height: auto;
     }
 }
 .creator-text-content,.partner-text-content{
@@ -517,6 +521,7 @@ body{
   .index-info-content{
     position: relative;
     width: 100%;
+    height: auto;
     padding: 10px;
     }
 }
