@@ -28,24 +28,12 @@ $.scrollify({
   $(".pagination a").on("click",$.scrollify.move);
   }
 });
-$(window).on('resize',function(){
-  if(current){
-      var currentScrl = $('.index-section').eq(current).offset().top;
-      $(window).scrollTop(currentScrl);
-  }
-});
 // $(window).on('resize',function(){
 //   if(current){
-//       var currentScrl = $('.index-section').eq(current).offset();
+//       var currentScrl = $('.index-section').eq(current).offset().top;
 //       $(window).scrollTop(currentScrl);
 //   }
-
 // });
-// リロードしたら一番上のページに戻す
-// $(function() {
-//   $('html,body').animate({ scrollTop: 0 }, '1');
-// });
-
 /* ------------------------------------------------------------------ */
 
 // スクロールしたら背景を暗くする
