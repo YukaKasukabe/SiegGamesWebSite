@@ -42,7 +42,6 @@ $.scrollify({
   interstitialSection : ".footer",
 	scrollSpeed: 500, // スクロール時の速度
   scrollbars:false,//スクロールバー表示・非表示設定
-  // standardScrollElements: '.index-partner-section', //通常スクロール要素
   before:function(i,scrollify){
       current = i
       $('.pagenation .active').removeClass('active');
@@ -70,8 +69,6 @@ $(window).on('resize',function(){
       $(window).scrollTop(currentScrl);
   }
 
-// $(".index-top-section").append(pagination);//はじめのエリアにページネーションを表示
-// $(".pagination a").on("click",$.scrollify.move);
 });
 
 // リロードしたら一番上のページに戻す

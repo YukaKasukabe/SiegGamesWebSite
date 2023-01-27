@@ -147,11 +147,6 @@ body{
   width: 400px;
   height: auto;
   }
-  @media screen and (max-width: 959px){
-    .splash-logo img {
-      width: 300px;
-      }
-  }
   @media screen and (max-width: 480px){
     .splash-logo img {
       width: 200px;
@@ -275,11 +270,6 @@ body{
   vertical-align: baseline;
   border-bottom: 1px solid #ffffff50;
 }
-@media screen and (max-width: 959px){
-  .header {
-    height: 150px;
-    }
-}
 @media screen and (max-width: 480px){
   .header {
     height: 100px;
@@ -292,11 +282,6 @@ body{
   height: 60px;
   align-items: center;
 }
-@media screen and (max-width: 959px){
-  .header-content {
-    margin-top: 70px;
-    }
-}
 @media screen and (max-width: 480px){
   .header-content {
     margin-top: 25px;
@@ -308,11 +293,6 @@ body{
 .header-logo img {
   width: 200px;
   height: auto;
-}
-@media screen and (max-width: 959px){
-  .header-logo img {
-    width: 200px;
-    }
 }
 @media screen and (max-width: 480px){
   .header-logo img {
@@ -344,11 +324,6 @@ body{
   z-index: 3; 
   cursor: pointer;
   letter-spacing: 1px;
-}
-@media screen and (max-width: 959px){
-  .header-nav-inview li a {
-    display: none;
-    }
 }
 @media screen and (max-width: 480px){
   .header-nav-inview li a {
@@ -428,9 +403,6 @@ body{
   margin-left: auto;
   position: relative;
 }
-
-@media screen and (max-width: 959px){
- }
 @media screen and (max-width: 480px){
   .footer-contact,.footer-socials{
     display: none;
@@ -450,11 +422,6 @@ body{
   overflow: hidden;
   z-index: -1;
 }
-@media screen and (max-width: 959px){
-  .hero-image-slider {
-    height: 400px;
-    }
-}
 @media screen and (max-width: 480px){
   .hero-image-slider {
     height: 200px;
@@ -467,12 +434,6 @@ body{
   bottom: 0;
   right: 96px;
   color: #ffffff;
-}
-@media screen and (max-width: 959px){
-  .top-label {
-    font-size: 100px;
-    right: 96px;
-    }
 }
 @media screen and (max-width: 480px){
   .top-label {
@@ -492,11 +453,6 @@ body{
   margin-top: 50px;
   text-align: center;
   overflow: hidden;
-}
-@media screen and (max-width: 959px){
-  .section-label-content {
-    height: 160px;
-  }
 }
 @media screen and (max-width: 480px){
   .section-label-content {
@@ -525,12 +481,6 @@ body{
   z-index: 1;
   overflow: hidden;
 }
-@media screen and (max-width: 959px){
-  .section-label-top {
-    font-size: 22px;
-    letter-spacing: 6px;
-  }
-}
 @media screen and (max-width: 480px){
   .section-label-top {
     font-size: 20px;
@@ -547,12 +497,6 @@ body{
   color: #F5D523;
   letter-spacing: 3px;
   z-index: 1;
-}
-@media screen and (max-width: 959px){
-  .section-label-bottom {
-    font-size: 16px;
-    letter-spacing: 6px;
-  }
 }
 @media screen and (max-width: 480px){
   .section-label-bottom {
@@ -575,12 +519,6 @@ body{
   top: 25%;
   z-index: -1;
 }
-@media screen and (max-width: 959px){
-  .section-label-back {
-    font-size: 160px;
-    letter-spacing: 6px;
-  }
-}
 @media screen and (max-width: 480px){
   .section-label-back {
     font-size: 110px;
@@ -595,11 +533,6 @@ body{
   height: 16px;
   background-color: #2B2925;
   top: 50px;
-}
-@media screen and (max-width: 959px){
-  .section-label-back::before {
-    height: 16px;
-  }
 }
 @media screen and (max-width: 480px){
   .section-label-back::before {
