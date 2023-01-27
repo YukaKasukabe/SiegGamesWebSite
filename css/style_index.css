@@ -96,7 +96,7 @@ header,h2,text,.menu-nav{
 }
 @media screen and (max-width: 480px){
   .index-catchcopy h3 {
-    width: 90vw;
+    width: 100%;
     font-size: 18px;
     letter-spacing: 2px;
     margin-bottom: 6px;
@@ -114,7 +114,7 @@ header,h2,text,.menu-nav{
 }
 @media screen and (max-width: 480px){
   .index-catchcopy-en {
-    width: 90vw;
+    width: 100%;
     font-size: 12px;
     line-height: 20px;
     letter-spacing: 1px;
@@ -133,7 +133,7 @@ header,h2,text,.menu-nav{
     }
 }
 .index-text-title{
-  width: 100%;
+  width: 98%;
   letter-spacing: 2px;
   line-height: 40px;
   font-size: 20px;
@@ -297,9 +297,10 @@ header,h2,text,.menu-nav{
 }
 @media screen and (max-width: 480px){
   .index-text-content{
-    width: 100%;
+    width: 96vw;
     height: auto;
-    }
+    margin: 0 2vw;
+  }
 }
 .creator-text-content,.partner-text-content{
   grid-area: area1;
@@ -461,9 +462,11 @@ header,h2,text,.menu-nav{
 @media screen and (max-width: 480px){
   .partner-card-content{
     grid-template-rows: 350px 350px 350px 350px;
-    grid-template-columns: 250px;
-    grid-gap: 20px;
-    
+    grid-template-columns: 100vw;
+    grid-gap: 40px;
+    justify-items: center;
+    align-items: center;
+    margin-top: 40px;
  }	
 }
 .partner-card{
