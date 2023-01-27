@@ -101,6 +101,8 @@ body{
   font-family: 'IBM Plex Sans JP','Kanit',sans-serif;
   color: #ffffff;
   overflow: hidden;
+  width: 100%;
+  height: 100vh;
 }
 
 .header-nav-inview a,
