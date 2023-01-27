@@ -96,7 +96,7 @@ header,h2,text,.menu-nav{
 }
 @media screen and (max-width: 480px){
   .index-catchcopy h3 {
-    width: 90vw;
+    /* width: 90vw; */
     font-size: 18px;
     letter-spacing: 2px;
     margin-bottom: 6px;
@@ -114,7 +114,7 @@ header,h2,text,.menu-nav{
 }
 @media screen and (max-width: 480px){
   .index-catchcopy-en {
-    width: 90vw;
+    /* width: 90vw; */
     font-size: 12px;
     line-height: 20px;
     letter-spacing: 1px;
@@ -129,7 +129,7 @@ header,h2,text,.menu-nav{
 }
 @media screen and (max-width: 480px){
   .index-catchcopy-en::before {
-    width: 90vw;
+    /* width: 90vw; */
     }
 }
 .index-text-title{
@@ -218,10 +218,10 @@ header,h2,text,.menu-nav{
     width: 100vw;
   }
   .index-partner-section{
-    height: 100vh;
+    height: 220vh;
   }
   .index-partner-content{
-    height: 100vh;
+    height: 220vh;
   }
 }
 .index-grid-inview{
@@ -239,6 +239,12 @@ header,h2,text,.menu-nav{
     grid-gap: 5px;
     width: 100%;
     height: auto;
+    grid-template-rows: auto;
+    }
+  .index-partner-inview{
+    grid-gap: 5px;
+    width: 100%;
+    height: 220vh;
     grid-template-rows: auto;
     }
 }
@@ -322,9 +328,9 @@ header,h2,text,.menu-nav{
 @media screen and (max-width: 480px){
   .index-info-content{
     position: relative;
-    width: 100%;
+    width: 80%;
     height: auto;
-    padding: 10px;
+    padding: 1%;
     }
 }
 
@@ -463,17 +469,18 @@ header,h2,text,.menu-nav{
     grid-template-rows: 350px 350px 350px 350px;
     grid-template-columns: 250px;
     grid-gap: 20px;
+
  }	
 }
 .partner-card{
   display: block;
   width: 250px;
-  height: 250px;
+  height: 350px;
 }
 @media screen and (max-width: 480px){
   .partner-card{
-    height: auto;
-    margin: 0;
+    width: 250px;
+    margin: 0 auto;
  }	
 }
 
