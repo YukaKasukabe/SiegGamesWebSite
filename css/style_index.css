@@ -581,7 +581,7 @@ body{
 
 
 /* partner text ---------------------------------------- */
-.partner-card{
+.partner-card-content{
   display: grid;
   grid-template-rows: 350px;
   grid-template-columns: 250px 250px 250px 250px;
@@ -591,19 +591,19 @@ body{
   grid-area: area3;
 }
 @media screen and (max-width: 480px){
-  .partner-card{
+  .partner-card-content{
     grid-template-rows: 350px 350px 350px 350px;
     grid-template-columns: 250px;
     grid-gap: 20px;
  }	
 }
-.partner-card-inview{
+.partner-card{
   display: block;
   width: 250px;
   height: 250px;
 }
 @media screen and (max-width: 480px){
-  .partner-card-inview{
+  .partner-card{
     height: auto;
     margin: 0;
  }	
