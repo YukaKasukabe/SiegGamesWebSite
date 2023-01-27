@@ -117,6 +117,149 @@ body{
 
 /* content end ---------------------------------------- */
 
+/* Loading背景画面設定　*/
+.splash {
+  /*fixedで全面に固定*/
+    position: fixed;
+    width: 100%;
+    min-height: 100vh; /* Fallback */
+    min-height: calc(var(--vh, 1vh) * 100);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 30000;
+    background:#ffffff;
+    text-align:center;
+    color:#fff;
+  }
+  
+  /* Loading画像中央配置　*/
+.splash-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+/* ロゴアイコンの大きさ設定 */
+.splash-logo img {
+  width: 400px;
+  height: auto;
+  }
+  @media screen and (max-width: 959px){
+    .splash-logo img {
+      width: 300px;
+      }
+  }
+  @media screen and (max-width: 480px){
+    .splash-logo img {
+      width: 200px;
+      }
+  }
+
+.splash-anim{
+  animation-name: splashAnime;
+  animation-duration:0.2s;
+  animation-fill-mode:forwards;
+  opacity: 0;
+  }
+  
+  @keyframes splashAnime{
+    from {
+      opacity: 0;
+    transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+    transform: translateY(0);
+    }
+  }
+
+.splash-bg{
+  display: none;
+  }
+
+body.appear .splash-bg{
+  display: block;
+  content: "";
+  position:fixed;
+  z-index: 999;
+  width: 100%;
+  min-height: 100vh; /* Fallback */
+  min-height: calc(var(--vh, 1vh) * 100);
+  top: 0;
+  left: 0;
+  transform: scaleX(0);
+  background-color: #F5D523;/*伸びる背景色の設定*/
+	animation-name:PageAnime;
+	animation-duration:1s;
+	animation-timing-function:ease-in-out;
+	animation-fill-mode:forwards;
+
+}
+@keyframes PageAnime{
+	0% {
+		transform-origin:left;
+		transform:scaleX(0);
+	}
+	50% {
+		transform-origin:left;
+		transform:scaleX(1);
+	}
+	50.001% {
+		transform-origin:right;
+	}
+	100% {
+		transform-origin:right;
+		transform:scaleX(0);
+	}
+}
+/*画面遷移の後現れるコンテンツ設定*/
+.container{
+	opacity: 0;/*はじめは透過0に*/
+}
+
+/*bodyにappearクラスがついたら出現*/
+body.appear .container{
+	animation-name:PageAnimeAppear;
+	animation-duration:0.2s;
+	animation-delay: 0.6s;
+	animation-fill-mode:forwards;
+	opacity: 0;
+}
+
+@keyframes PageAnimeAppear{
+	0% {
+	opacity: 0;
+	}
+	100% {
+	opacity: 1;
+}
+}
+body{
+  background-color: #ffffff;
+	animation: ChangeColorAnim 2.2s;
+  animation-delay: 0.6s;
+  background-color: #2B2925;
+}
+@keyframes ChangeColorAnim{
+	0% {
+    background-color: #ffffff;
+	}
+	50% {
+    background-color: #ffffff;
+	}
+	50.001% {
+    background-color: #2B2925
+	}
+	100% {
+    background-color: #2B2925
+	}
+}
+
+/* ---------------------------------------- */
+
 /* header */
 .header{
   position: fixed;
@@ -252,8 +395,7 @@ body{
   position: relative;
   height: 150px;
   border-top: 1px solid #ffffff50;
-  /* backdrop-filter: blur(5px); */
-  /* background-color: #ffffff90; */
+  z-index: 1000;
 }
 
 .scroll-top:hover span{
@@ -430,6 +572,7 @@ body{
   line-height: 140px;
   letter-spacing: 14px;
   top: 25%;
+  z-index: -1;
 }
 @media screen and (max-width: 959px){
   .section-label-back {
@@ -470,22 +613,21 @@ body{
 /* ページトップリンク */
 .scroll-top{
 	position: fixed;
-  bottom: 180px;  
   right: 8%;
   cursor: pointer;  
-  z-index: 2;
+  z-index: 900;
   /* 形状 */
   width: 60px;
   height: 60px;
   border-radius: 50%;
   border: 1px solid #ffffff50;
 }
-/*.scroll-viewクラスがついたら出現*/
-/* .scroll-top .scroll-view {
-	opacity: 1;
-	visibility: visible;
-} */
-
+.page-down{
+  bottom: 80px;  
+}
+.page-top{
+  bottom: 180px;  
+}
 .page-top span{
   display: block;
   width: 12px;
@@ -527,66 +669,7 @@ body{
 _:-ms-lang(x), .js-scroll a::before{
 	right:-11px;
 }
-/* スクロールガイド */
-/* .scroll-down{
-  position: fixed;
-  bottom: 80px;  
-  right: 8%;
-  left: auto;
-  align-items: center;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  border: 1px solid #ffffff50;
-  transition:all 0.3s;
-  z-index: 100;
-} */
-
- /* .page-down::after,
- .page-down::before {
-  content: ''; */
-  /*絶対配置で波形の位置を決める*/
-  /* position: absolute;
-  left: -116%;
-  top: -116%; */
-  /*波形の形状*/
-  /* border: 40px solid #ffffff;
-  width: 200%;
-  height: 200%;
-  border-radius: 50%; */
-  /*はじめは不透明*/
-  /* opacity: 0; */
-  /*ループするアニメーションの設定*/
-  /* animation:2s circleanime linear infinite; */
-/* }
-.scroll-down::before {
-animation-delay: 0.4s; 
-} */
-
-/*波形のアニメーション*/
-/* @keyframes circleanime{
-0%{
-  transform: scale(0);
-  opacity: 0;
-}
-5%{
-  transform: scale(0.1);
-  opacity: 0.1;
-}
-80%{
-  transform: scale(0.8);
-  opacity: 0.3;
-}
-100%{
-  transform: scale(1);
-  opacity: 0;
-}
-} */
-
 /* ---------------------------------------- */
-
-/* ---------------------------------------- */
-
 
 /* button */
 .button {
@@ -674,10 +757,10 @@ animation-delay: 0.4s;
 
 
 /* 共通表示アニメーション */
-.fadeUpAnime{
+.fadeUp{
   opacity: 0;
 }
-.fadeUp{
+.fadeUpAnime{
   animation-name:fadeUpAnime;
   animation-duration:0.6s;
   animation-fill-mode:forwards;
@@ -686,7 +769,7 @@ animation-delay: 0.4s;
   @keyframes fadeUpAnime{
     from {
       opacity: 0;
-    transform: translateY(100px);
+    transform: translateY(50px);
     }
   
     to {
@@ -704,7 +787,7 @@ animation-delay: 0.4s;
   @keyframes fadeInAnime{
     from {
       opacity: 0;
-      transform: translateY(-100px);
+      transform: translateY(-50px);
     }
   
     to {
@@ -712,6 +795,7 @@ animation-delay: 0.4s;
       transform: translateY(0);
     }
   }
+
 .fadeOut{
   animation-name:fadeOutAnime;
   animation-duration:0.6s;
@@ -725,7 +809,7 @@ animation-delay: 0.4s;
     }
     to {
       opacity: 0;
-      transform: translateY(-100px);
+      transform: translateY(-50px);
     }
   }
 /* ---------------------------------------- */

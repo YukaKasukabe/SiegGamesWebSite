@@ -52,18 +52,17 @@ header,h2,text,.menu-nav{
   }
 
 .splash-anim{
-  animation-name: fadeUpAnime;
-  animation-duration:0.4s;
+  animation-name: splashAnime;
+  animation-duration:0.2s;
   animation-fill-mode:forwards;
   opacity: 0;
   }
   
-  @keyframes fadeUpAnime{
+  @keyframes splashAnime{
     from {
       opacity: 0;
-    transform: translateY(100px);
+    transform: translateY(50px);
     }
-  
     to {
       opacity: 1;
     transform: translateY(0);
@@ -117,7 +116,7 @@ body.appear .splash-bg{
 /*bodyにappearクラスがついたら出現*/
 body.appear .container{
 	animation-name:PageAnimeAppear;
-	animation-duration:1s;
+	animation-duration:0.2s;
 	animation-delay: 1s;
 	animation-fill-mode:forwards;
 	opacity: 0;
@@ -132,9 +131,9 @@ body.appear .container{
 }
 }
 body{
-  background-color: #ffffff;/*伸びる背景色の設定*/
-	animation: ChangeColorAnim 3.4s;
-  animation-delay: 1s;
+  background-color: #ffffff;
+	animation: ChangeColorAnim 1.5s;
+  animation-delay: 2s;
 }
 @keyframes ChangeColorAnim{
 	0% {
@@ -234,6 +233,7 @@ body{
   font-weight: 500;
   letter-spacing: 4px;
   margin-bottom: 10px;
+  z-index: 1;
 }
 @media screen and (max-width: 959px){
   .index-catchcopy h3 {
@@ -343,6 +343,7 @@ body{
   font-weight: 500;
   letter-spacing: 2px;
   margin-bottom: 8px;
+  z-index: 1;
 }
 @media screen and (max-width: 959px){
   .index-top-catch h1 {

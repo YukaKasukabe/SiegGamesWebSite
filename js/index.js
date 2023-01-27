@@ -14,8 +14,8 @@ setFillHeight();
 
 //スプラッシュロゴアニメーション
 $(window).on('load',function(){
-  $(".splash").delay(1500).fadeOut('slow');//ローディング画面を1.5秒（1500ms）待機してからフェードアウト
-  $(".splash-logo").delay(1200).fadeOut('slow');//ロゴを1.2秒（1200ms）待機してからフェードアウト
+  $(".splash").delay(200).fadeOut('slow');//ローディング画面を1.5秒（1500ms）待機してからフェードアウト
+  $(".splash-logo").delay(200).fadeOut('slow');//ロゴを1.2秒（1200ms）待機してからフェードアウト
 });
 //=====ここからローディングエリア（splashエリア）を1.5秒でフェードアウトした後に動かしたいJSをまとめる
 $(".splash").delay(1500).fadeOut('slow',function(){//ローディングエリア（splashエリア）を1.5秒でフェードアウトする記述

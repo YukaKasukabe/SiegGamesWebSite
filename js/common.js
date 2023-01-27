@@ -1,3 +1,24 @@
+//スプラッシュロゴアニメーション
+$(window).on('load',function(){
+// $(".splash").delay(600).fadeOut('slow');//ローディング画面を1.5秒（1500ms）待機してからフェードアウト
+$(".splash-logo").delay(400).fadeOut('slow');//ロゴを1.2秒（1200ms）待機してからフェードアウト
+});
+//=====ここからローディングエリア（splashエリア）を1.5秒でフェードアウトした後に動かしたいJSをまとめる
+$(".splash").delay(400).fadeOut('slow',function(){//ローディングエリア（splashエリア）を1.5秒でフェードアウトする記述
+
+$('body').addClass('appear');//フェードアウト後bodyにappearクラス付与
+
+});
+//=====ここまでローディングエリア（splashエリア）を1.5秒でフェードアウトした後に動かしたいJSをまとめる
+
+//=====ここから背景が伸びた後に動かしたいJSをまとめたい場合は
+$('.splashbg').on('animationend', function() { 
+//この中に動かしたいJSを記載
+});
+//=====ここまで背景が伸びた後に動かしたいJSをまとめる
+
+/* ------------------------------------------------------------------ */
+
 // フッターが表示されたら消える
 $(function() {
   var footer = $('.footer').innerHeight(); // footerの高さを取得
@@ -31,11 +52,11 @@ function delayScrollAnime() {
 		if (scroll >= elemPos - windowHeight && !$(parent).hasClass("play")) {//指定領域内にスクロールが入ったらまた親要素にクラスplayがなければ
 			$(childs).each(function () {
 				
-				if (!$(this).hasClass("fadeUp")) {//アニメーションのクラス名が指定されているかどうかをチェック
+				if (!$(this).hasClass("fadeUpAnime")) {//アニメーションのクラス名が指定されているかどうかをチェック
 					
 					$(parent).addClass("play");	//親要素にクラス名playを追加
 					$(this).css("animation-delay", value + "s");//アニメーション遅延のCSS animation-delayを追加し
-					$(this).addClass("fadeUp");//アニメーションのクラス名を追加
+					$(this).addClass("fadeUpAnime");//アニメーションのクラス名を追加
 					value = value + time;//delay時間を増加させる
 					
 					//全ての処理を終わったらplayを外す
@@ -46,7 +67,7 @@ function delayScrollAnime() {
 				}
 			})
 		}else {
-			$(childs).removeClass("fadeUp");//アニメーションのクラス名を削除
+			$(childs).removeClass("fadeUpAnime");//アニメーションのクラス名を削除
 			value = time;//delay初期値の数値に戻す
 		}
 	})
