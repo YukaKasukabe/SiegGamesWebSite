@@ -60,9 +60,9 @@ header,h2,text,.menu-nav{
 
 /* 共通設定 ---------------------------------------- */
 .index-main-content{
-  width: 100%;
+  width: 100vw;
   height: auto;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 .index-section{
   width: 100vw;
@@ -96,7 +96,7 @@ header,h2,text,.menu-nav{
 }
 @media screen and (max-width: 480px){
   .index-catchcopy h3 {
-    /* width: 90vw; */
+    width: 90vw;
     font-size: 18px;
     letter-spacing: 2px;
     margin-bottom: 6px;
@@ -114,7 +114,7 @@ header,h2,text,.menu-nav{
 }
 @media screen and (max-width: 480px){
   .index-catchcopy-en {
-    /* width: 90vw; */
+    width: 90vw;
     font-size: 12px;
     line-height: 20px;
     letter-spacing: 1px;
@@ -129,7 +129,7 @@ header,h2,text,.menu-nav{
 }
 @media screen and (max-width: 480px){
   .index-catchcopy-en::before {
-    /* width: 90vw; */
+    width: 90vw;
     }
 }
 .index-text-title{
@@ -241,12 +241,6 @@ header,h2,text,.menu-nav{
     height: auto;
     grid-template-rows: auto;
     }
-  .index-partner-inview{
-    grid-gap: 5px;
-    width: 100%;
-    height: 220vh;
-    grid-template-rows: auto;
-    }
 }
 
 .index-creator-inview{
@@ -328,9 +322,9 @@ header,h2,text,.menu-nav{
 @media screen and (max-width: 480px){
   .index-info-content{
     position: relative;
-    width: 80%;
+    width: 100%;
     height: auto;
-    padding: 1%;
+    padding: 10px;
     }
 }
 
@@ -469,7 +463,7 @@ header,h2,text,.menu-nav{
     grid-template-rows: 350px 350px 350px 350px;
     grid-template-columns: 250px;
     grid-gap: 20px;
-
+    
  }	
 }
 .partner-card{
@@ -480,7 +474,7 @@ header,h2,text,.menu-nav{
 @media screen and (max-width: 480px){
   .partner-card{
     width: 250px;
-    margin: 0 auto;
+    height: auto;
  }	
 }
 
