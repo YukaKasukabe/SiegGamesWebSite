@@ -167,6 +167,13 @@ body{
   min-height: 100%;
   min-width: 100%;
 }
+@media screen and (max-width: 480px){
+  .video-area,.video{
+    /* width: 100vw; */
+    height: 100vh;
+    overflow: hidden;
+ }
+}
 /* スクロールしたら背景を暗くする */
 .video-overlay{
   position: absolute;
