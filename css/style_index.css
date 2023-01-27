@@ -352,10 +352,10 @@ body{
     width: 100vw;
   }
   .index-partner-section{
-    height: 225vh;
+    height: 100vh;
   }
   .index-partner-content{
-    height: 225vh;
+    height: 100vh;
   }
 }
 .index-grid-inview{
