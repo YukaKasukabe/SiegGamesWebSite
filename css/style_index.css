@@ -224,17 +224,18 @@ header,h2,text,.menu-nav{
 .index-grid-content {
   position: relative;
   width: 100%;
-  height: 120vh;
+  height: 100vh;
 }
 @media screen and (max-width: 480px){
   .index-grid-content{
+    height: 140vh;
     width: 90vw;
   }
   .index-partner-section{
-    height: 230vh;
+    height: 250vh;
   }
   .index-partner-content{
-    height: 230vh;
+    height: 250vh;
   }
 }
 .index-grid-inview{
@@ -251,7 +252,7 @@ header,h2,text,.menu-nav{
   .index-grid-inview{
     grid-gap: 5px;
     width: 90vw;
-    height: 120vh;
+    height: 140vh;
     top: 120px;
     left: 0;
     transform: none;
