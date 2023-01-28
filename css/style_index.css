@@ -224,7 +224,7 @@ header,h2,text,.menu-nav{
 .index-grid-content {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 150vh;
 }
 @media screen and (max-width: 480px){
   .index-grid-content{
@@ -251,8 +251,8 @@ header,h2,text,.menu-nav{
   .index-grid-inview{
     grid-gap: 5px;
     width: 90vw;
-    height: auto;
-    top: 140px;
+    height: 150vh;
+    top: 120px;
     left: 0;
     transform: none;
     grid-template-rows: auto;
@@ -530,6 +530,27 @@ header,h2,text,.menu-nav{
   width: 250px;
   height: 250px;
   list-style: none;
+  background-color: #ffffff;
+  border-radius: 10px;
+
+}
+.partner-logo-inview p{
+  display: flex;
+  width: 200px;
+  height: 200px;
+  color: #8C8B89;
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+
+  margin: 25px;
+}
+/* .partner-logo-inview{
+  width: 250px;
+  height: 250px;
+  list-style: none;
 }
 .partner-logo-inview img{
   width: 190px;
@@ -538,7 +559,7 @@ header,h2,text,.menu-nav{
   padding: 20px 30px;
   background: #ffffff;
   border-radius: 10px;
-}
+} */
 @media screen and (max-width: 480px){
   .partner-logo-inview img{
     border-radius: 5px;
