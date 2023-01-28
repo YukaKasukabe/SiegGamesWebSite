@@ -751,12 +751,12 @@ _:-ms-lang(x), .js-scroll a::before{
 /* ---------------------------------------- */
 
 /* キャッチコピー全体表示アニメーション */
-.bg-extend{
+/* .bg-extend{
 	animation-name:bgextendAnimeBase;
 	animation-duration:0.1s;
 	animation-fill-mode:forwards;
 	position: relative;
-	overflow: hidden;/* はみ出た色要素を隠す */
+	overflow: hidden;
 	opacity:0;
   top: 0px;
 }
@@ -774,21 +774,18 @@ _:-ms-lang(x), .js-scroll a::before{
 	animation-delay: 0.8s;
 	animation-fill-mode:forwards;
 	opacity: 0;
-  /* text-align: center; */
   padding: 0 12px;
 }
 @keyframes bgextendAnimeSecond{
 	0% {
 	opacity: 0;
-  /* color: #2B2925; */
 	}
 	100% {
 	opacity: 1;
-  /* color: #ffffff; */
 }
-}
+} */
 /* テキスト背景アニメーション 左から右 */
-.bg-LRextend::before{
+/* .bg-LRextend::before{
   animation-name:bgLRextendAnime;
 	animation-duration:0.8s;
 	animation-fill-mode:forwards;
@@ -839,5 +836,5 @@ _:-ms-lang(x), .js-scroll a::before{
 .bg-appear-trigger,
 .bg-LRextend-trigger{
     opacity: 0;
-}
+} */
 /* ---------------------------------------- */

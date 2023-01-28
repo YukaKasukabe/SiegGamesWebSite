@@ -86,19 +86,23 @@ header,h2,text,.menu-nav{
     margin-bottom: 4px;
     }
 }
-.index-catchcopy h3{
-  width: 600px;
+.index-catchcopy strong{
+  width: auto;
   font-size: 30px;
   font-weight: 500;
   letter-spacing: 4px;
+  line-height: 56px;
   margin-bottom: 10px;
-  z-index: 1;
+  background-color:  #2B2925;
+  box-shadow: 0.2em 0 0 #2B2925, -0.2em 0 0 #2B2925;
+  border-radius: 0.15em;
 }
 @media screen and (max-width: 480px){
-  .index-catchcopy h3 {
+  .index-catchcopy strong {
     width: 100%;
-    font-size: 18px;
-    letter-spacing: 2px;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: 44px;
     margin-bottom: 6px;
     }
 }
@@ -170,18 +174,22 @@ header,h2,text,.menu-nav{
 .index-catch-content{
   width: 100%;
 }
-.index-top-catch h1{
-  width: 100%;
+.index-top-catch strong{
+  width: auto;
   font-size: 40px;
   font-weight: 500;
   letter-spacing: 2px;
+  line-height: 70px;
   margin-bottom: 8px;
-  z-index: 1;
+  background-color:  #2B2925;
+  box-shadow: 0.2em 0 0 #2B2925, -0.2em 0 0 #2B2925;
+  border-radius: 0.15em;
 }
 @media screen and (max-width: 480px){
-  .index-top-catch h1 {
-    font-size: 18px;
+  .index-top-catch strong{
+    font-size: 24px;
     letter-spacing: 0;
+    line-height: 44px;
     }
 }
 .top-catchcopy-yellow{
