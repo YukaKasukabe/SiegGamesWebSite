@@ -1,0 +1,260 @@
+@charset "utf-8";
+
+/* 表示領域 */
+body{
+  /* background-color: #2B2925; */
+  overflow: visible;
+}
+/* ---------------------------------------- */
+
+/* フォント設定  ---------------------------------------- */
+h2,h3,h4,p,a{
+  font-family: 'IBM Plex Sans JP',sans-serif;
+  font-weight: normal;
+}
+h1,text,.section-label-bottom,.section-label-back{
+  font-family: 'Kanit',sans-serif;
+  font-weight: normal;
+}
+/* ---------------------------------------- */
+
+/* 社名横スクロールアニメーション*/
+.label-sieggames-loop{
+  display: block;
+  width: 100%;
+  height: 100px;
+  margin-top: 150px;
+  overflow: visible;
+}
+/* ラベル表示領域 */
+.label-sieggames-loop-inview{
+  width: 100%;
+  height: 100px;
+  overflow: visible;
+} 
+/* アウトライン設定 */
+.label-sieggames-text{
+  font-size: 8.75rem;
+  fill: #ffffff;
+  fill-opacity: 0;
+  stroke: #ffffff50;
+  stroke-width: 0.5;
+  stroke-linejoin: round;
+  animation : labelscroll 60s linear infinite;
+}
+@keyframes labelscroll{
+  0% { transform: translateX(0)}
+  100% { transform: translateX(-100%)}
+}
+/* ---------------------------------------- */
+
+
+/* 共通設定*/
+/* ---------------------------------------- */
+.company-info-content,.company-accsess-map-content,.company-history-content{
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #3F3D3A;
+  padding: 80px 0;
+  margin: 0 auto;
+}
+@media screen and (max-width: 480px){
+  .company-info-content,.company-accsess-map-content,.company-history-content{
+    padding: 40px 0;
+ }
+}
+.company-info-inview,.company-accsess-map-inview{
+  display: block;
+  width: 45%;
+  height: auto;
+  background: #E2E2E2;
+  border-radius: 10px;
+  padding: 30px 80px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 480px){
+  .company-info-inview,.company-accsess-map-inview{
+    width: 80%;
+    padding: 5%;
+ }
+}
+/* .company-history-inview{
+  display: block;
+  width: 45%;
+  height: auto;
+  padding: 30px 80px;
+  margin: 0 auto;
+} */
+
+/* 会社概要・アクセス項目 */
+/* ---------------------------------------- */
+
+.company-info-deta,.accsess-deta{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: auto;
+  margin: 20px 0;
+}
+@media screen and (max-width: 480px){
+  .company-info-deta,.accsess-deta{
+  flex-direction: column;
+ }
+}
+.company-info-deta-title,.accsess-deta-title{
+  width: 20%;
+  font-size: 16px;
+  font-weight: 600;
+  color: #2B2925;
+  text-align: start;
+  letter-spacing: 2px;
+  margin-right: 2%;
+  padding: 20px;
+  border-bottom: 2px solid #b5b1b1;
+}
+@media screen and (max-width: 480px){
+  .company-info-deta-title,.accsess-deta-title{
+    width: 96%;
+    font-size: 14px;
+    margin-right: 0;
+    padding: 2%;
+ }
+}
+.company-info-deta-text,.accsess-deta-text{
+  width: 78%;
+  font-size: 16px;
+  color: #2B2925;
+  line-height: 30px;
+  padding: 20px;
+  border-bottom: 1px solid #b5b1b1;
+}
+@media screen and (max-width: 480px){
+  .company-info-deta-text,.accsess-deta-text{
+    width: 96%;
+    font-size: 14px;
+    line-height: 24px;
+    padding: 2%;
+    border-bottom: none;
+ }
+}
+/* ---------------------------------------- */
+
+
+
+/* 沿革 */
+/* ---------------------------------------- */
+/* .company-history-section{
+  display: block;
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+.company-history-timeline {
+  display: block;
+  width: 100%;
+  height: auto;
+} */
+/* ライン描画 */
+/* .company-history-timeline::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  left: 50%;
+  background-color: #2B2925;
+}
+.company-history-event {
+  width: 100%;
+  list-style: none;
+}
+.history-event{
+  width: 100%;
+}
+.history-event-year{
+  width: 100%;
+  font-size: 64px;
+  font-weight: bold;
+  line-height: 80px;
+  color: #b5b1b1;
+  text-align: start;
+}
+.history-event-details {
+  position: relative;
+  background: #E2E2E2;
+  border-radius: 10px;
+  width: 100%;
+  height: auto;
+  padding: 20px 50px;
+  margin: 20px 0;
+}
+.history-event-title{
+  width: 100%;
+  height: auto;
+  font-size: 16px;
+  font-weight: bold;
+  color: #2B2925;
+  line-height: 30px;
+  text-align: start;
+}
+.history-event-text{
+  width: 100%;
+  height: auto;
+  font-size: 16px;
+  color: #2B2925;
+  line-height: 24px;
+  text-align: start;
+}
+.history-event-copy{
+  width: 100%;
+  height: auto;
+  font-size: 10px;
+  color: #2B2925;
+  line-height: 24px;
+  text-align: start;
+} */
+/* ---------------------------------------- */
+
+/* アクセス */
+.company-accsess-info{
+  display: block;
+  width: 100%;
+  height: auto;
+  /* padding: 40px; */
+}
+.company-accsess-info-inview{
+  width: 100%;
+}
+.company-accsess-map{
+  display: flex;
+  width: 100%;
+  height: 40%;
+  margin: 0 auto;
+}
+.company-accsess-map iframe{
+  width: 100%;
+  height: 600px;
+}
+@media screen and (max-width: 480px){
+  .company-accsess-map iframe{
+    height: 300px;
+ }
+}
+.company-name{
+  width: auto;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px;
+  margin-top: 30px;
+  color: #2B2925;
+  padding: 20px;
+  border-bottom: 2px solid #b5b1b1;
+}
+@media screen and (max-width: 480px){
+  .company-name{
+    font-size: 18px;
+    padding: 5px;
+    line-height: 28px;
+ }
+}
+/* ---------------------------------------- */

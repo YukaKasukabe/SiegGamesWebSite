@@ -1,0 +1,399 @@
+
+/* メニューボタン */
+.menu-button{
+  position: fixed;
+  right: 8%;
+  left: auto;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 1px solid #ffffff50;
+  z-index: 20000;
+  cursor: pointer;
+  transition: ease .2s;
+}
+@media screen and (max-width: 959px){
+  .menu-button {
+    width: 60px;
+    height: 60px;
+    }
+}
+@media screen and (max-width: 480px){
+  .menu-button {
+    width: 48px;
+    height: 48px;
+    }
+}
+.menu-button::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: transform .6s cubic-bezier(0.8, 0, 0.2, 1) 0s;
+  transform: scale(0, 1);
+  transform-origin: right top;
+}
+.menu-button:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+  border-radius: 50%;
+  background: #F5D523;
+	width: 100%;
+	height: 100%;
+	transition: transform .5s cubic-bezier(0.8, 0, 0.2, 1) 0s;
+	transform: scale(0, 0);
+	transform-origin:center;
+}
+
+.menu-button:hover:before{
+	transform:scale(1.2, 1.2);
+}
+
+.menu-button span{
+  left: 16px;
+  height: 3px;
+  border-radius: 25px;
+  background: #ffffff;
+  display: inline-block;
+  position: absolute;
+  transition: all 0.3s;
+}
+@media screen and (max-width: 959px){
+  .menu-button span {
+    left: 16px;
+    height: 3px;
+    }
+}
+@media screen and (max-width: 480px){
+  .menu-button span {
+    left: 13px;
+    height: 2px;
+    }
+}
+.menu-button span::before{
+  background: #2B2925;
+}
+.menu-button span:nth-of-type(1) {
+  top: 23px;	
+  width: 45%;
+}
+.menu-button span:nth-of-type(2) {
+  top:  30px;
+  width: 45%;
+}
+.menu-button span:nth-of-type(3) {
+  top: 37px;
+  width: 45%;
+}
+@media screen and (max-width: 480px){
+  .menu-button span:nth-of-type(1) {
+    top: 18px;	
+    width: 45%;
+    }
+  .menu-button span:nth-of-type(2) {
+    top:  24px;
+    width: 45%;
+    }
+  .menu-button span:nth-of-type(3)  {
+    top: 30px;
+    width: 45%;
+    }
+}
+
+.menu-button:hover span{
+  background: #2B2925;
+}
+
+/*activeクラスが付与されると線が回転して×に*/
+.menu-button.active:hover:before{
+  background: #ffffff;
+}
+.menu-button.active{
+  border: none;
+}
+.menu-button.active span{
+  background: #2B2925;
+}
+.menu-button.active span:nth-of-type(1) {
+  top: 22px;
+  left: 15px;
+  transform: translateY(6px) rotate(-45deg);
+  width: 50%;
+}
+.menu-button.active span:nth-of-type(2) {
+  opacity: 0;
+}
+.menu-button.active span:nth-of-type(3) {
+  top: 35px;
+  left: 15px;
+  transform: translateY(-6px) rotate(45deg);
+  width: 50%;
+}
+@media screen and (max-width: 480px){
+  .menu-button.active span:nth-of-type(1) {
+    top: 18px;
+    left: 12px;
+    }
+  .menu-button.active span:nth-of-type(3)  {
+    top: 30px;
+    left: 12px;
+    }
+}
+
+/* ---------------------------------------- */
+
+/* メニューナビゲーション */
+.menu-content{
+  position: fixed;
+  width: 100vw;
+  min-height: 100vh; /* Fallback */
+  min-height: calc(var(--vh, 1vh) * 100);
+  top:0;
+  right: -120%;
+  bottom: 0;
+  background: #F5D523;
+	transition: all 0.6s;
+  z-index: 10000;
+  
+}
+.menu-content.panelactive{
+  animation-name:MenuSlideInAnime;
+  animation-duration:0.4s;
+	animation-timing-function:ease-in-out;
+	animation-fill-mode:forwards;
+}
+@keyframes MenuSlideInAnime{
+	0% {
+    right: -120%;
+	}
+	100% {
+    right: 0;
+	}
+}
+.menu-inview{
+  display: block;
+  width: 100vw;
+  min-height: 100vh; /* Fallback */
+  min-height: calc(var(--vh, 1vh) * 100);
+  margin: 0 auto;
+  opacity: 0;
+}
+.menu-inview.panelactive{
+  animation-name:MenuNavAnime;
+  animation-delay: 0.4s;
+  animation-duration:0.5s;
+	animation-timing-function:ease-in-out;
+	animation-fill-mode:forwards;
+}
+@keyframes MenuNavAnime{
+	0% {
+    opacity: 0;
+	}
+	100% {
+    opacity: 1;
+	}
+}
+/* header 社名ロゴ表示位置 */
+.menu-other-top{
+  position: relative;
+  /* margin-right: auto; */
+  width: 100%;
+  height: 150px;
+}
+@media screen and (max-width: 480px){
+  .menu-other-top {
+    height: 80px;
+    }
+}
+.menu-other-top::before{
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 1px;
+  top: 150px;
+  background: #2B2925;
+}
+@media screen and (max-width: 480px){
+  .menu-other-top::before {
+    top: 100px;
+    }
+}
+.menu-logo{
+  padding-top: 80px;
+  margin-left: 8%;
+}
+@media screen and (max-width: 480px){
+  .menu-logo {
+    padding-top: 35px;
+    }
+}
+/* header 社名ロゴサイズ */
+.menu-logo img {
+  width: 200px;
+  height: auto;
+}
+@media screen and (max-width: 480px){
+  .menu-logo img {
+    width: 150px;
+    }
+}
+.menu-nav{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.menu-nav-inview{
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  margin: 150px 0;
+}
+.menu-nav-inview{
+  width: 100%;
+  height: 100%;
+  z-index: 1100;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
+.menu-nav-inview li a{
+  display: block;
+	text-transform: uppercase;
+  font-size: 40px;
+  font-weight: 500;
+  color: #2B2925;
+  letter-spacing: 2px;
+  z-index: 10;
+  text-decoration: none;
+	/* padding:10px; */
+
+}
+@media screen and (max-width: 959px){
+  .menu-nav-inview li a{
+    font-size: 30px;
+}
+}
+@media screen and (max-width: 480px){
+  .menu-nav-inview li a{
+    font-size: 24px;
+}
+}
+.menu-nav-inview li{
+  position: relative;/*アニメーションの起点とするためrelativeを指定*/
+  overflow: hidden;
+  text-decoration: none; 
+  border-radius: 5px;
+  width: 400px;
+  height: 60px;
+  outline: none;
+  text-align: center;
+  margin: 20px auto;
+  transition: ease .2s;
+  cursor: pointer;
+}
+@media screen and (max-width: 959px){
+  .menu-nav-inview li{
+    margin: 20px auto;
+    }
+}
+@media screen and (max-width: 480px){
+  .menu-nav-inview li{
+    margin: 10px auto;
+    }
+}
+
+.menu-nav-inview li a:hover{
+  color:  #ffffff;
+  width: 100%;
+  font-weight: 500;
+}
+/* 背景が流れるアニメーション設定 */
+.menu-nav-inview li:before {  
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background: #2B2925;
+  width: 400px;
+  height: 100%;
+  transition: transform .6s cubic-bezier(0.8, 0, 0.2, 1) 0s;
+  transform: scale(0, 1);
+  transform-origin: right top;
+}
+/*hoverした際の形状*/
+.menu-nav-inview li:hover:before{
+  transform-origin:left top;
+  transform:scale(1, 1);
+}
+/* ---------------------------------------- */
+
+/* メニュー用フッター全体の表示位置 */
+.menu-other-bottom{
+  position: absolute;
+  z-index: 1100;
+  width: 100vw;
+  height: 150px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+@media screen and (max-width: 959px){
+  .menu-other-bottom {
+    width: 200px;
+    }
+}
+@media screen and (max-width: 480px){
+  .menu-other-bottom {
+    flex-direction: column;
+    width: 100vw;
+    height: 100px;
+    }
+}
+/* footer 内容物 */
+.menu-other-nav{
+  width: 100%;
+  margin: 0 8%;
+}
+
+/* footer SNS画像グループ */
+.other-socials{
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+@media screen and (max-width: 480px){
+  .other-socials {
+    justify-content: center;
+    margin: 15px 0;
+    }
+}
+/* footer SNS画像単体*/
+.other-icons img{
+  width: 32px;
+  margin-right: 40px;
+  color: #2B2925;
+}
+/* contact 表示位置*/
+.other-contact{
+  list-style: none;
+  margin-left: auto;
+  position: relative;
+}
+/* コピーライト */
+.menu-other-copy{
+  color: #2B2925;
+  display: block;
+  text-align: center;
+  font-size: 12px;
+  padding: 10px 0 0 0;
+  border-top: 1px solid #2B2925;
+}
+/* ---------------------------------------- */

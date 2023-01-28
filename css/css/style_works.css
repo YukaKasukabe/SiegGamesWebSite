@@ -1,0 +1,194 @@
+@charset "utf-8";
+
+/* 表示領域 */
+body{
+  /* background-color: #2B2925; */
+  overflow: visible;
+}
+/* ---------------------------------------- */
+
+/* フォント設定  ---------------------------------------- */
+h2,h3,h4,p,a{
+  font-family: 'IBM Plex Sans JP',sans-serif;
+  font-weight: normal;
+}
+h1,text,.section-label-bottom,.section-label-back{
+  font-family: 'Kanit',sans-serif;
+  font-weight: normal;
+}
+/* ---------------------------------------- */
+
+/* 社名横スクロールアニメーション*/
+.label-sieggames-loop{
+  display: block;
+  width: 100%;
+  height: 100px;
+  margin-top: 150px;
+  overflow: visible;
+}
+/* ラベル表示領域 */
+.label-sieggames-loop-inview{
+  width: 100%;
+  height: 100px;
+  overflow: visible;
+} 
+/* アウトライン設定 */
+.label-sieggames-text{
+  font-size: 8.75rem;
+  fill: #ffffff;
+  fill-opacity: 0;
+  stroke: #ffffff50;
+  stroke-width: 0.5;
+  stroke-linejoin: round;
+  animation : labelscroll 60s linear infinite;
+}
+@keyframes labelscroll{
+  0% { transform: translateX(0)}
+  100% { transform: translateX(-100%)}
+}
+/* ---------------------------------------- */
+
+
+.game-works-section,.systrm-works-section{
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+/* works card */
+.works-content{
+  width: 100%;
+  height: auto;
+  background: #3F3D3A;
+  padding: 40px 0;
+}
+
+.works-content-inview{
+  display: flex;
+  /* flex-wrap: wrap; */
+  align-items: stretch;
+  width: 70%;
+  margin: 0 auto;
+}
+@media screen and (max-width: 959px){
+  .works-content-inview {
+    width: 300px;
+    }
+}
+@media screen and (max-width: 480px){
+  .works-content-inview {
+  flex-direction: column;
+    }
+}
+.works-card{
+  /* flex-basis:  300px; */
+  width: 300px;
+  height: 430px;
+  border-radius: 10px;
+  background: #E2E2E2;
+  margin: 20px auto;
+}
+.works-card-inview{
+  margin: 10px 15px;
+}
+
+.works-img{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-gap: 1rem;
+}
+
+.works-img img{
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  background: #ffffff;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.works-release-date{
+  font-size: 14px;
+  line-height: 26px;
+  color: #8C8B89;
+}
+.works-date-title{
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 26px;
+ 
+  /* margin: 4px 0; */
+  border-bottom: 1px solid #b5b1b1;
+  color: #2B2925;
+}
+.works-date-copy{
+  font-size: 12px;
+  line-height: 10px;
+  color: #2B2925;
+}
+.works-platform{
+  display: flex;
+  text-align: center;
+}
+.works-platform-icon{
+  width: 90px;
+  height: 18px;
+  background-color: #8C8B89;
+  margin: 5px 10px 5px 0;
+}
+@media screen and (max-width: 959px){
+  .works-platform-icon {
+    width: 90px;
+    margin: 5px 10px 5px 0;
+  }
+}
+@media screen and (max-width: 480px){
+  .works-platform-icon {
+    width: 80px;
+    margin: 5px 5px 5px 0;
+  }
+}
+.works-platform span{
+  border-radius: 5px;
+  text-align: center;
+  font-size: 14px;  
+  color: #ffffff;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 1px;
+  padding: 3px 0 0;
+}
+@media screen and (max-width: 959px){
+  .works-platform span {
+    font-size: 14px;  
+  }
+}
+@media screen and (max-width: 480px){
+  .works-platform span {
+    font-size: 12px;  
+  }
+}
+.works-date-text{
+  font-size: 14px;
+  line-height: 32px;
+  color: #2B2925;
+}
+.button-website{
+  width: 100%;
+  border: 1px solid #2B2925;
+  padding: 10px 0;
+  margin-top: 10px;
+}
+.button-website span{
+  color: #2B2925;
+}
+.button-website:hover span {
+  color: #ffffff;
+}
+.button-website:before {  
+  background:#2B2925;
+}
+/* .button-website:hover:before{
+} */
+
+/* ---------------------------------------- */

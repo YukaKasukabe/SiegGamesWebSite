@@ -1,0 +1,92 @@
+@charset "utf-8";
+
+/* 表示領域 */
+body{
+  /* background-color: #2B2925; */
+  overflow: visible;
+}
+/* ---------------------------------------- */
+
+/* フォント設定  ---------------------------------------- */
+h2,h3,h4,p,a{
+  font-family: 'IBM Plex Sans JP',sans-serif;
+  font-weight: normal;
+}
+h1,text,.section-label-bottom,.section-label-back{
+  font-family: 'Kanit',sans-serif;
+  font-weight: normal;
+}
+/* ---------------------------------------- */
+
+/* 社名横スクロールアニメーション*/
+.label-sieggames-loop{
+  display: block;
+  width: 100%;
+  height: 100px;
+  margin-top: 150px;
+  overflow: visible;
+}
+/* ラベル表示領域 */
+.label-sieggames-loop-inview{
+  width: 100%;
+  height: 100px;
+  overflow: visible;
+} 
+/* アウトライン設定 */
+.label-sieggames-text{
+  font-size: 8.75rem;
+  fill: #ffffff;
+  fill-opacity: 0;
+  stroke: #ffffff50;
+  stroke-width: 0.5;
+  stroke-linejoin: round;
+  animation : labelscroll 60s linear infinite;
+}
+@keyframes labelscroll{
+  0% { transform: translateX(0)}
+  100% { transform: translateX(-100%)}
+}
+/* ---------------------------------------- */
+
+/* 共通設定 */
+.massege-section{
+  display: block;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.massege-content{
+  display: block;
+  width: 100%;
+  height: 600px;
+  background: #3F3D3A;
+  padding: 80px 0;
+  margin: 0 auto;
+}
+/* ---------------------------------------- */
+
+/* メッセージ */
+.president-message{
+  width: 100%;
+  height: 100%;
+}
+.president-message-content{
+  width: 100%;
+  height: 100%;
+}
+.president-message-inview{
+  width: 100%;
+  height: 100%;
+
+}
+.president-message-text{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  font-size: 40px;
+  letter-spacing: 2px;
+  color: #ffffff50;
+}  
+/* ---------------------------------------- */
