@@ -223,8 +223,8 @@ header,h2,text,.menu-nav{
 .index-grid-inview{
   position: absolute;
   display: grid;
-  grid-template-rows: 210px 250px;
-  grid-gap: 40px;
+  grid-template-rows: 160px 330px;
+  grid-gap: 10px 50px;
   height: 500px;
   top: 50%;
   left: 50%;
@@ -297,7 +297,7 @@ header,h2,text,.menu-nav{
 
 .index-text-content{
   width: 600px;
-  height: 230px;
+  height: 160px;
   grid-row: 1;
   grid-column: 1;
 }
@@ -317,7 +317,7 @@ header,h2,text,.menu-nav{
 
 .index-info-content{
   width: 560px;
-  height: 230px;
+  height: 310px;
   grid-row: 2;
   grid-column: 1;
   flex-direction: column;
@@ -372,45 +372,52 @@ header,h2,text,.menu-nav{
 
 /* creator text ---------------------------------------- */
 .creator-position{
-  font-size: 16px;
+  font-size: 14px;
   line-height: 26px;
   letter-spacing: 1px;
+  padding: 2px 2px 0 ;
 }
 .creator-name{
+  width: 550px;
   font-size: 20px;
   font-weight: 500;
-  line-height: 30px;
+  color: #ffffff;
   letter-spacing: 2px;
-  margin-bottom: 4px;
+  margin-bottom: 5px;
+  padding: 5px;
   border-bottom: 1px solid #ffffff50;
 }
 .creator-name-en{
-  font-size: 14px;
+  font-size: 16px;
   letter-spacing: 1px;
   margin-bottom: 10px;
+  padding: 0 2px;
 }
 .creator-details-title{
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
-  line-height: 24px;
-  text-align: left;
+  line-height: 26px;
+  /* text-align: right; */
+  margin-top: 20px;
+  padding: 2px;
 }
 .creator-details-text{
-  font-size: 14px;
-  line-height: 24px;
-  text-align: left;
+  font-size: 16px;
+  line-height: 30px;
+  /* text-align: right; */
+  padding: 2px;
 }
 /* creator text ---------------------------------------- */
 
 /* works text ---------------------------------------- */
 .works-title{
-  width: 100%;
-  font-size: 18px;
+  width: 550px;
+  font-size: 20px;
   font-weight: 500;
   color: #ffffff;
-  /* line-height: 26px; */
   letter-spacing: 2px;
-  margin-bottom: 8px;
+  margin-bottom: 15px;
+  padding: 5px;
   border-bottom: 1px solid #ffffff50;
 }
 .works-deta{
@@ -419,22 +426,24 @@ header,h2,text,.menu-nav{
   width: 100%;
   height: auto;
   align-items: baseline;
-  margin-bottom: 8px;
+  margin-bottom: 5px;
 }
 .works-deta-title{
-  width: 15%;
-  font-size: 12px;
+  width: 200px;
+  font-size: 14px;
   font-weight: 500;
   color: #ffffff;
   text-align: start;
   letter-spacing: 2px;
-  margin-right: 2%;
+  margin-right: 10px;
+  padding: 2px;
 }
 .works-deta-text{
-  width: 60%;
-  font-size: 12px;
+  width: 340px;
+  font-size: 14px;
   color: #ffffff;
-  line-height: 18px;
+  line-height: 24px;
+  padding: 2px;
 }
 @media screen and (max-width: 480px){
   .works-deta {
