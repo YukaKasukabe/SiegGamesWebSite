@@ -65,9 +65,15 @@ header,h2,text,.menu-nav{
   overflow: hidden;
 }
 .index-section{
-  width: 100vw;
+  width: 100%;
   height: 100vh;
  }
+ @media screen and (max-width: 480px){
+  .index-section {
+    width: 90vw;
+    margin: 0 20px;
+    }
+}
 /* ---------------------------------------- */
 
 /* セクション内共通テキスト ---------------------------------------- */
@@ -81,7 +87,7 @@ header,h2,text,.menu-nav{
 }
 @media screen and (max-width: 480px){
   .index-title {
-    width: 100%;
+    width: 90vw;
     font-size: 16px;
     margin-bottom: 4px;
     }
@@ -96,10 +102,11 @@ header,h2,text,.menu-nav{
   background-color:  #2B2925;
   box-shadow: 0.2em 0 0 #2B2925, -0.2em 0 0 #2B2925;
   border-radius: 0.15em;
+  -webkit-box-decoration-break: clone;
 }
 @media screen and (max-width: 480px){
   .index-catchcopy strong {
-    width: 100%;
+    width: 90vw;
     font-size: 24px;
     letter-spacing: 0;
     line-height: 44px;
@@ -118,7 +125,7 @@ header,h2,text,.menu-nav{
 }
 @media screen and (max-width: 480px){
   .index-catchcopy-en {
-    width: 100%;
+    width: 90vw;
     font-size: 12px;
     line-height: 20px;
     letter-spacing: 1px;
@@ -153,7 +160,9 @@ header,h2,text,.menu-nav{
 }
 @media screen and (max-width: 480px){
   .index-top-content{
-    margin: 0 16px;
+    position: none;
+    width: 90vw;
+    margin: 0;
     }
 }
 .index-top-inview{
@@ -167,8 +176,7 @@ header,h2,text,.menu-nav{
 }
 @media screen and (max-width: 480px){
   .index-top-inview{
-    width: 96vw;
-    /* margin: 80px 2vw 40px; */
+    width: 90vw;
     }
 }
 .index-catch-content{
@@ -184,6 +192,7 @@ header,h2,text,.menu-nav{
   background-color:  #2B2925;
   box-shadow: 0.2em 0 0 #2B2925, -0.2em 0 0 #2B2925;
   border-radius: 0.15em;
+  -webkit-box-decoration-break: clone;
 }
 @media screen and (max-width: 480px){
   .index-top-catch strong{
@@ -219,7 +228,7 @@ header,h2,text,.menu-nav{
 }
 @media screen and (max-width: 480px){
   .index-grid-content{
-    width: 100vw;
+    width: 90vw;
   }
   .index-partner-section{
     height: 220vh;
@@ -241,7 +250,7 @@ header,h2,text,.menu-nav{
 @media screen and (max-width: 480px){
   .index-grid-inview{
     grid-gap: 5px;
-    width: 100%;
+    width: 90vw;
     height: auto;
     top: 140px;
     left: 0;
@@ -281,7 +290,7 @@ header,h2,text,.menu-nav{
 }
   @media screen and (max-width: 480px){
     .index-creator-inview,.index-works-inview,.index-partner-inview{
-      width: 100vw;
+      width: 90vw;
       height: auto
       }
     .index-creator-inview{
@@ -311,9 +320,9 @@ header,h2,text,.menu-nav{
 }
 @media screen and (max-width: 480px){
   .index-text-content{
-    width: 96vw;
+    width: 90vw;
     height: auto;
-    margin: 0 2vw;
+    /* margin: 0 24px; */
   }
 }
 .creator-text-content,.partner-text-content{
@@ -337,10 +346,10 @@ header,h2,text,.menu-nav{
 @media screen and (max-width: 480px){
   .index-info-content{
     position: relative;
-    width: 96vw;
+    width: 86vw;
     height: auto;
     padding: 2vw;
-    border-radius: 0;
+    border-radius: 5px;
     }
 }
 
@@ -352,7 +361,7 @@ header,h2,text,.menu-nav{
 }
 @media screen and (max-width: 480px){
   .index-image{
-    width: 100%;
+    width: 90vw;
     height: auto;
 	}	
  }
@@ -370,10 +379,10 @@ header,h2,text,.menu-nav{
 }
 @media screen and (max-width: 480px){
   .creator-image img,.works-image img{
-   width: 100vw;
-   min-width: 100vw;
+   width: 90vw;
+   min-width: 90vw;
    height: auto;
-   border-radius: 0;
+   border-radius: 5px;
   }
 	}
 /* creator works partner グリッド設定  ---------------------------------------- */
@@ -395,6 +404,11 @@ header,h2,text,.menu-nav{
   padding: 5px;
   border-bottom: 1px solid #ffffff50;
 }
+@media screen and (max-width: 480px){
+  .creator-name{
+   width: auto;
+  }
+	}
 .creator-name-en{
   font-size: 16px;
   letter-spacing: 1px;
@@ -427,6 +441,11 @@ header,h2,text,.menu-nav{
   margin-bottom: 15px;
   padding: 5px;
   border-bottom: 1px solid #ffffff50;
+}
+@media screen and (max-width: 480px){
+  .works-title{
+   width: auto;
+  }
 }
 .works-deta{
   display: flex;
@@ -481,7 +500,7 @@ header,h2,text,.menu-nav{
 @media screen and (max-width: 480px){
   .partner-card-content{
     grid-template-rows: 350px 350px 350px 350px;
-    grid-template-columns: 100vw;
+    grid-template-columns: 90vw;
     grid-gap: 40px;
     justify-items: center;
     align-items: center;
@@ -522,7 +541,7 @@ header,h2,text,.menu-nav{
 }
 @media screen and (max-width: 480px){
   .partner-logo-inview img{
-    border-radius: 0;
+    border-radius: 5px;
  }	
 }
 .partner-details{
