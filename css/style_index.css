@@ -20,6 +20,14 @@ header,h2,text,.menu-nav{
   bottom:0;
   overflow: hidden;
 }
+@media screen and (max-width: 480px){
+  .video-area{
+    /* position: fixed; */
+    width: 100vw;
+    height: 100vh;
+    /* overflow: hidden; */
+ }
+}
 .video {
   /*天地中央配置*/
   position: absolute;
@@ -34,12 +42,12 @@ header,h2,text,.menu-nav{
   min-width: 100%;
 }
 @media screen and (max-width: 480px){
-  .video-area{
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
+  .video{
+    min-height: 100vh;
+    min-width: 100vw;
+  }
  }
-}
+
 /* スクロールしたら背景を暗くする */
 .video-overlay{
   position: absolute;
