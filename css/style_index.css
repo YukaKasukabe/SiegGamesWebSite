@@ -649,6 +649,7 @@ header,h2,text,.menu-nav{
 @media screen and (max-width: 480px){
   .label-loop-inview{
     width: 100vw;
+    bottom: 80px;
  }
 }
 /* アウトライン設定 */
