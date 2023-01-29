@@ -274,6 +274,7 @@ body{
 }
 @media screen and (max-width: 480px){
   .header {
+    width: 100vw;
     height: 100px;
     }
 }
@@ -384,6 +385,7 @@ body{
 }
 @media screen and (max-width: 480px){
   .footer {
+    width: 100vw;
     text-align: center;
     }
 }

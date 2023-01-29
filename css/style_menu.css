@@ -207,6 +207,7 @@
 @media screen and (max-width: 480px){
   .menu-other-top {
     height: 80px;
+    width: 100vw;
     }
 }
 .menu-other-top::before{
@@ -219,6 +220,7 @@
 }
 @media screen and (max-width: 480px){
   .menu-other-top::before {
+    width: 100vw;
     top: 100px;
     }
 }

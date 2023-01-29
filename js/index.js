@@ -4,7 +4,7 @@ $.scrollify({
   scrollbars:"false",//スクロールバー表示・非表示設定
   interstitialSection : ".footer",
   easing: "swing", // swing,linear,easeOutExpo
-  scrollSpeed: 800, // スクロール時の速度
+  scrollSpeed: 500, // スクロール時の速度
   standardScrollElements: 'index-section2,index-section3,index-section4',
   
   //以下、ページネーション設定
