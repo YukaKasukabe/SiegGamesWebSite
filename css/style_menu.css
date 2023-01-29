@@ -338,8 +338,6 @@
 
 /* メニュー用フッター全体の表示位置 */
 .menu-other-bottom{
-  /* position: relative; */
-  /* display: flex; */
   position: absolute;
   z-index: 1100;
   width: 100%;
@@ -368,7 +366,7 @@
 @media screen and (max-width: 480px){
   .other-bottom-content {
     grid-template-rows: auto;
-    grid-template-columns: 90%;
+    grid-template-columns: 100vw;
     grid-template-areas:
     "area2"
     "area1";
