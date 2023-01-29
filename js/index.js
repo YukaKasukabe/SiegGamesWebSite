@@ -29,31 +29,13 @@ $.scrollify({
   $(".pagination a").on("click",$.scrollify.move);
   }
 });
-// $(window).on('resize',function(){
-//   if(current){
-//       var currentScrl = $('.index-section').eq(current).offset().top;
-//       $(window).scrollTop(currentScrl);
-//   }
-// });
-
-// function switchByWidth(){
-//   if (window.matchMedia('(max-width: 480px)').matches) {
-//       //スマホ処理
-//   } else if (window.matchMedia('(min-width: 481px)').matches) {
-//       //PC処理
-//   }
-// }
-
-//ロードとリサイズの両方で同じ処理を付与する
-window.onload = switchByWidth;
-window.onresize = switchByWidth;
 
 /* ------------------------------------------------------------------ */
 
 // スクロールしたら背景を暗くする
 $(function() {
 	$(window).on('load scroll', function(){
-			if ($(window).scrollTop() > 500) {
+			if ($(window).scrollTop() > 100) {
 					$('.video-overlay').addClass('video-overlay-end');
 			} else {
 					$('.video-overlay').removeClass('video-overlay-end');

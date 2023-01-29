@@ -231,11 +231,8 @@ header,h2,text,.menu-nav{
     height: 140vh;
     width: 90vw;
   }
-  /* .index-partner-section{
-    height: 250vh; */
-  /* } */
   .index-partner-content{
-    height: 260vh;
+    height: 2000px;
   }
 }
 .index-grid-inview{

@@ -223,7 +223,7 @@
     }
 }
 .menu-logo{
-  padding-top: 80px;
+  padding-top: 90px;
   margin-left: 8%;
 }
 @media screen and (max-width: 480px){
@@ -314,7 +314,7 @@
   font-weight: 500;
 }
 /* 背景が流れるアニメーション設定 */
-.menu-nav-inview li:before {  
+/* .menu-nav-inview li:before {  
   content: '';
   position: absolute;
   top: 0;
@@ -326,7 +326,7 @@
   transition: transform .6s cubic-bezier(0.8, 0, 0.2, 1) 0s;
   transform: scale(0, 1);
   transform-origin: right top;
-}
+} */
 /*hoverした際の形状*/
 .menu-nav-inview li:hover:before{
   transform-origin:left top;
@@ -336,32 +336,55 @@
 
 /* メニュー用フッター全体の表示位置 */
 .menu-other-bottom{
+  /* position: relative; */
+  /* display: flex; */
   position: absolute;
   z-index: 1100;
-  width: 100vw;
+  width: 100%;
   height: 150px;
   bottom: 0;
   left: 0;
   right: 0;
-}
-@media screen and (max-width: 959px){
-  .menu-other-bottom {
-    width: 200px;
-    }
+  border-top: 1px solid #2B2925;
 }
 @media screen and (max-width: 480px){
   .menu-other-bottom {
-    flex-direction: column;
-    width: 100vw;
-    height: 100px;
+    text-align: center;
     }
 }
+.other-bottom-content{
+  display: grid;
+  grid-template-rows: 100px;
+  grid-template-columns: 30% 30% 30%;
+  grid-gap: 5%;
+  grid-row: 1 / 3;
+  grid-column: 1;
+  grid-template-areas:
+    "area1 area2 area3";
+  margin: 25px 8%;
+}
+@media screen and (max-width: 480px){
+  .other-bottom-content {
+    grid-template-rows: auto;
+    grid-template-columns: 90%;
+    grid-template-areas:
+    "area2"
+    "area1";
+    margin: 10px 20px;
+        }
+  }
 /* footer 内容物 */
 .menu-other-nav{
-  width: 100%;
-  margin: 0 8%;
+  grid-area: area1;
+  width: 200px;
+  height: 40px;
 }
-
+@media screen and (max-width: 480px){
+  .menu-other-nav {
+    width: 100vw;
+    height: auto;
+    }
+  }
 /* footer SNS画像グループ */
 .other-socials{
   list-style: none;
@@ -377,23 +400,14 @@
 }
 /* footer SNS画像単体*/
 .other-icons img{
-  width: 32px;
-  margin-right: 40px;
-  color: #2B2925;
-}
-/* contact 表示位置*/
-.other-contact{
-  list-style: none;
-  margin-left: auto;
-  position: relative;
+  width: 40px;
+  margin-right: 60px;
 }
 /* コピーライト */
 .menu-other-copy{
-  color: #2B2925;
-  display: block;
+  grid-area: area2;
   text-align: center;
   font-size: 12px;
-  padding: 10px 0 0 0;
-  border-top: 1px solid #2B2925;
+  color: #2B2925;
 }
 /* ---------------------------------------- */
