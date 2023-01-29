@@ -4,9 +4,10 @@ $.scrollify({
   scrollbars:"false",//スクロールバー表示・非表示設定
   interstitialSection : ".footer",
   easing: "swing", // swing,linear,easeOutExpo
+  // offset : 500,
   scrollSpeed: 500, // スクロール時の速度
-  standardScrollElements: 'index-section2,index-section3,index-section4',
-  // setHeights: true,
+  // standardScrollElements: 'index-section2,index-section3,index-section4',
+  setHeights: true,
   overflowScroll: true,
   updateHash: true,
   touchScroll:true,
@@ -32,7 +33,22 @@ $.scrollify({
   $("#index-section1").append(pagination);//はじめのエリアにページネーションを表示
   $(".pagination a").on("click",$.scrollify.move);
   }
+  
+
 });
+
+function switchByWidth(){
+  if (window.matchMedia('(max-width: 480px)').matches) {
+    $.scrollify.disable(".index-section");
+  } else if (window.matchMedia('(min-width:481px)').matches) {
+    $.scrollify.enable(".index-section");
+  }
+  
+  window.onload = switchByWidth;
+  window.onresize = switchByWidth;
+
+}
+
 
 $(window).on('resize',function(){
   if(current){
@@ -40,7 +56,6 @@ $(window).on('resize',function(){
       $(window).scrollTop(currentScrl);
   }
 });
-
 
 /* ------------------------------------------------------------------ */
 
