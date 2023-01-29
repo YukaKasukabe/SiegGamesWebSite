@@ -299,6 +299,7 @@ body{
   width: 200px;
   height: auto;
   padding-top: 10px;
+  cursor: pointer;
 }
 @media screen and (max-width: 480px){
   .header-logo img {
@@ -381,7 +382,7 @@ body{
   left: 0;
   right: 0;
   border-top: 1px solid #ffffff50;
-  z-index: 1000;
+  z-index: 100;
 }
 @media screen and (max-width: 480px){
   .footer {
@@ -437,7 +438,8 @@ body{
 .social-icons img{
   width: 32px;
   height: auto;
-  margin-right: 60px;
+  margin-right: 50px;
+  cursor: pointer;
 }
  .footer-copy{
   grid-area: area2;

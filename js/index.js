@@ -29,12 +29,13 @@ $.scrollify({
   $(".pagination a").on("click",$.scrollify.move);
   }
 });
-$(window).on('resize',function(){
-  if(current){
-      var currentScrl = $('.index-section').eq(current).offset().top;
-      $(window).scrollTop(currentScrl);
-  }
-});
+
+// $(window).on('resize',function(){
+//   if(current){
+//       var currentScrl = $('.index-section').eq(current).offset().top;
+//       $(window).scrollTop(currentScrl);
+//   }
+// });
 
 
 /* ------------------------------------------------------------------ */

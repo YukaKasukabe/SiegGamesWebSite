@@ -439,14 +439,25 @@ header,h2,text,.menu-nav{
 
 /* works text ---------------------------------------- */
 .works-title{
-  width: 550px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  border-bottom: 1px solid #ffffff50;
+  margin-bottom: 15px;
+  padding: 5px;
+}
+@media screen and (max-width: 480px){
+  .works-title{
+   width: auto;
+  }
+}
+.works-title-text{
+  width: auto;
   font-size: 20px;
   font-weight: 500;
   color: #ffffff;
   letter-spacing: 2px;
-  margin-bottom: 15px;
-  padding: 5px;
-  border-bottom: 1px solid #ffffff50;
+  padding-bottom: 4px;
 }
 @media screen and (max-width: 480px){
   .works-title{
@@ -575,19 +586,34 @@ header,h2,text,.menu-nav{
   width: 250px;
   height: 80px;
   margin: 10px 0;
-
 }
+.works-title img,.partner-details img{
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+@media screen and (max-width: 480px){
+  .works-title img,.partner-details img{
+    width: 18px;
+    height: 18px;
+	}	
+ }
 .partner-name{
-  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  border-bottom: 1px solid #ffffff50;
+}
+.partner-name-text{
+  width: auto;
   height: auto;
   font-size: 16px;
   font-weight: 500;
   line-height: 26px;
   letter-spacing: 2px;
   color: #fff;
-  border-bottom: 1px solid #ffffff50;
   margin-bottom: 5px;
-
+  margin-right: 5px;
 }
 .partner-details-text{
   width: 100%;
