@@ -32,8 +32,6 @@ $.scrollify({
   $("#index-section1").append(pagination);//はじめのエリアにページネーションを表示
   $(".pagination a").on("click",$.scrollify.move);
   }
-  
-
 });
 
 // function switchByWidth(){
@@ -49,12 +47,12 @@ $.scrollify({
 // }
 
 
-$(window).on('resize',function(){
-  if(current){
-      var currentScrl = $('.index-section').eq(current).offset().top;
-      $(window).scrollTop(currentScrl);
-  }
-});
+// $(window).on('resize',function(){
+//   if(current){
+//       var currentScrl = $('.index-section').eq(current).offset().top;
+//       $(window).scrollTop(currentScrl);
+//   }
+// });
 
 /* ------------------------------------------------------------------ */
 
