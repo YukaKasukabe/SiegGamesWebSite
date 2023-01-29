@@ -36,6 +36,17 @@ $.scrollify({
 //   }
 // });
 
+// function switchByWidth(){
+//   if (window.matchMedia('(max-width: 480px)').matches) {
+//       //スマホ処理
+//   } else if (window.matchMedia('(min-width: 481px)').matches) {
+//       //PC処理
+//   }
+// }
+
+//ロードとリサイズの両方で同じ処理を付与する
+window.onload = switchByWidth;
+window.onresize = switchByWidth;
 
 /* ------------------------------------------------------------------ */
 
