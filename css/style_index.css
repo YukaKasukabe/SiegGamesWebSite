@@ -636,6 +636,7 @@ header,h2,text,.menu-nav{
 }
 @media screen and (max-width: 480px){
   .label-loop{
+    width: 100vw;
     bottom: 80px;
  }
 }
@@ -645,6 +646,11 @@ header,h2,text,.menu-nav{
   height: 100px;
   overflow: visible;
 }  
+@media screen and (max-width: 480px){
+  .label-loop-inview{
+    width: 100vw;
+ }
+}
 /* アウトライン設定 */
 .label-loop-text{
   font-size: 8.75rem;
