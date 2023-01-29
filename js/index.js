@@ -29,13 +29,20 @@ $.scrollify({
   $(".pagination a").on("click",$.scrollify.move);
   }
 });
+$(window).on('resize',function(){
+  if(current){
+      var currentScrl = $('.index-section').eq(current).offset().top;
+      $(window).scrollTop(currentScrl);
+  }
+});
+
 
 /* ------------------------------------------------------------------ */
 
 // スクロールしたら背景を暗くする
 $(function() {
 	$(window).on('load scroll', function(){
-			if ($(window).scrollTop() > 100) {
+			if ($(window).scrollTop() > 500) {
 					$('.video-overlay').addClass('video-overlay-end');
 			} else {
 					$('.video-overlay').removeClass('video-overlay-end');
