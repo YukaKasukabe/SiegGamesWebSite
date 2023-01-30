@@ -59,28 +59,32 @@ h1,text,.section-label-bottom,.section-label-back{
 
 .works-content-inview{
   display: flex;
-  /* flex-wrap: wrap; */
+  flex-wrap: wrap;
   align-items: stretch;
   width: 70%;
   margin: 0 auto;
 }
-@media screen and (max-width: 959px){
-  .works-content-inview {
-    width: 300px;
-    }
-}
 @media screen and (max-width: 480px){
   .works-content-inview {
-  flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    flex-direction: column;
     }
 }
 .works-card{
   /* flex-basis:  300px; */
   width: 300px;
   height: 430px;
+  min-width: 300px;
+  min-height: 430px;
   border-radius: 10px;
   background: #E2E2E2;
-  margin: 20px auto;
+  margin: 20px;
+}
+@media screen and (max-width: 480px){
+  .works-card {
+    margin: 20px 0;
+    }
 }
 .works-card-inview{
   margin: 10px 15px;

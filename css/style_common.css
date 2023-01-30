@@ -101,11 +101,12 @@ body{
   font-family: 'IBM Plex Sans JP','Kanit',sans-serif;
   color: #ffffff;
   overflow-x: hidden;
-  width: 100%;
+  width: 100vw;
 }
 @media screen and (max-width: 480px){
-  body {
+  body,main {
     width: 100vw;
+    overflow-x: hidden;
     }
 }
 .header-nav-inview a,
