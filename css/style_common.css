@@ -101,6 +101,7 @@ body{
   font-family: 'IBM Plex Sans JP','Kanit',sans-serif;
   color: #ffffff;
   overflow-x: hidden;
+  width: 100%;
 }
 @media screen and (max-width: 480px){
   body {
