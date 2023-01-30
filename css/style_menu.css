@@ -29,7 +29,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   height: 100%;
   transition: transform .6s cubic-bezier(0.8, 0, 0.2, 1) 0s;
   transform: scale(0, 1);
@@ -42,7 +42,7 @@
 	left: 0;
   border-radius: 50%;
   background: #F5D523;
-	width: 100%;
+  width: 100vw;
 	height: 100%;
 	transition: transform .5s cubic-bezier(0.8, 0, 0.2, 1) 0s;
 	transform: scale(0, 0);
@@ -201,7 +201,7 @@
 .menu-other-top{
   position: relative;
   /* margin-right: auto; */
-  width: 100%;
+  width: 100vw;
   height: 150px;
 }
 @media screen and (max-width: 480px){
@@ -213,7 +213,7 @@
 .menu-other-top::before{
   position: absolute;
   content: "";
-  width: 100%;
+  width: 100vw;
   height: 1px;
   top: 150px;
   background: #2B2925;
@@ -245,7 +245,7 @@
 }
 .menu-nav{
   position: relative;
-  width: 100%;
+  width: 100vw;
   height: 100%;
 }
 
@@ -257,7 +257,7 @@
   margin: 150px 0;
 }
 .menu-nav-inview{
-  width: 100%;
+  width: 100vw;
   height: 100%;
   z-index: 1100;
   top:50%;
@@ -340,7 +340,7 @@
 .menu-other-bottom{
   position: absolute;
   z-index: 1100;
-  width: 100%;
+  width: 100vw;
   height: 150px;
   bottom: 0;
   left: 0;
