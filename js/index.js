@@ -1,4 +1,3 @@
-
 if(!navigator.userAgent.match(/(iPhone|Android)/)){
   $(function(){
     $.scrollify({
@@ -34,26 +33,25 @@ if(!navigator.userAgent.match(/(iPhone|Android)/)){
   });
   }
 
-  if(navigator.userAgent.match(/(iPhone|iPad|Android)/)){
-    $(function(){
-      $.scrollify({
-        section : ".index-section",//1ページスクロールさせたいエリアクラス名
-        scrollbars : "false",//スクロールバー表示・非表示設定
-        interstitialSection : ".footer",
-        easing : "swing", // swing,linear,easeOutExpo
-        scrollSpeed : 1100, // スクロール時の速度
-        standardScrollElements: '#index-section2,#index-section3,#index-section4',
-        });
-    });
-    }
+if(navigator.userAgent.match(/(iPhone|Android)/)){
+  $(function(){
+    $.scrollify({
+      section : ".index-section",//1ページスクロールさせたいエリアクラス名
+      scrollbars : "false",//スクロールバー表示・非表示設定
+      interstitialSection : ".footer",
+      easing : "swing", // swing,linear,easeOutExpo
+      scrollSpeed : 1100, // スクロール時の速度
+      standardScrollElements: '#index-section2,#index-section3,#index-section4',
+      });
+  });
+  }
 
-  $(window).on('resize',function(){
-    if(current){
-        var currentScrl = $('.index-section').eq(current).offset().top;
-        $(window).scrollTop(currentScrl);
-    }
+$(window).on('resize',function(){
+  if(current){
+      var currentScrl = $('.index-section').eq(current).offset().top;
+      $(window).scrollTop(currentScrl);
+  }
 });
-
 
 /* ------------------------------------------------------------------ */
 

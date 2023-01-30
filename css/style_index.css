@@ -252,6 +252,7 @@ header,h2,text,.menu-nav{
     left: 0;
     transform: none;
     grid-template-rows: auto;
+    transform: none;
     }
 }
 
@@ -275,7 +276,6 @@ header,h2,text,.menu-nav{
   .index-creator-inview,.index-works-inview{
     margin-top: 0;
     margin-bottom: 0;
-
     }
 }
 .index-creator-inview,.index-partner-inview{
@@ -318,7 +318,6 @@ header,h2,text,.menu-nav{
   .index-text-content{
     width: 90vw;
     height: auto;
-    /* margin: 0 24px; */
   }
 }
 .creator-text-content,.partner-text-content{
