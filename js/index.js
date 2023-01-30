@@ -5,10 +5,10 @@ $.scrollify({
   easing: "swing", // swing,linear,easeOutExpo
   scrollSpeed: 1100, // スクロール時の速度
   standardScrollElements: 'index-section2,index-section3,index-section4',
-  setHeights: true,
-  overflowScroll: true,
-  updateHash: true,
-  touchScroll:true,
+  // setHeights: true,
+  // overflowScroll: true,
+  // updateHash: true,
+  // touchScroll:true,
 
   
   //以下、ページネーション設定
@@ -34,6 +34,14 @@ $.scrollify({
     }
 
   });
+
+  $(window).on('resize',function(){
+    if(current){
+        var currentScrl = $('.index-section').eq(current).offset().top;
+        $(window).scrollTop(currentScrl);
+    }
+});
+
 
 /* ------------------------------------------------------------------ */
 
