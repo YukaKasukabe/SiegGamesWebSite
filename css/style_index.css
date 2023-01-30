@@ -62,7 +62,6 @@ header,h2,text,.menu-nav{
   width: 84%;
   height: 100%;
   margin: 0 8%;
-  overflow: hidden;
  }
  @media screen and (max-width: 480px){
   .index-section {
@@ -548,7 +547,6 @@ header,h2,text,.menu-nav{
   text-align: center;
   align-items: center;
   justify-content: center;
-
   margin: 25px;
 }
 /* .partner-logo-inview{

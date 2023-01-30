@@ -1,12 +1,5 @@
 @charset "utf-8";
 
-/* 表示領域 */
-body{
-  /* background-color: #2B2925; */
-  overflow: visible;
-}
-/* ---------------------------------------- */
-
 /* フォント設定  ---------------------------------------- */
 h2,h3,h4,p,a{
   font-family: 'IBM Plex Sans JP',sans-serif;

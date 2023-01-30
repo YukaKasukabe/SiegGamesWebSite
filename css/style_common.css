@@ -100,8 +100,9 @@ li{
 body{
   font-family: 'IBM Plex Sans JP','Kanit',sans-serif;
   color: #ffffff;
+  width: 100vw;
+  height: auto;
 }
-
 .header-nav-inview a,
 .menu-nav-inview a{
   font-family: 'Kanit',sans-serif;
