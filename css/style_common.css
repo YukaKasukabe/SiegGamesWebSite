@@ -97,11 +97,15 @@ li{
 
 
 /* body */
+html {
+  overflow-x: hidden;
+}
 body{
   font-family: 'IBM Plex Sans JP','Kanit',sans-serif;
   color: #ffffff;
   overflow-x: hidden;
   width: 100vw;
+  min-width: 100vw;
 }
 @media screen and (max-width: 480px){
   body,main {
