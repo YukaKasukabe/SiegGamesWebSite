@@ -51,15 +51,15 @@ header,h2,text,.menu-nav{
 /* スクロールしたら背景を暗くする */
 .video-overlay{
   position: absolute;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   z-index: -5;
   transition: 0.5s;
 }
 .video-overlay-end{
   position: absolute;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   backdrop-filter: blur(10px);
   z-index: -5;
   background-color:#000000c0;
@@ -73,7 +73,7 @@ header,h2,text,.menu-nav{
   overflow: hidden;
 }
 .index-section{
-  width: 100vw;
+  width: 100%;
   height: 100vh;
  }
  @media screen and (max-width: 480px){
@@ -162,7 +162,7 @@ header,h2,text,.menu-nav{
 /* top   ---------------------------------------- */
 .index-top-content{
   position: relative;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   margin: 0 8%;
 }
@@ -231,7 +231,7 @@ header,h2,text,.menu-nav{
 /* creator works partner グリッド設定---------------------------------------- */
 .index-grid-content {
   position: relative;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
 }
 @media screen and (max-width: 480px){
@@ -629,7 +629,7 @@ header,h2,text,.menu-nav{
 /* 社名スクロールアニメーション*/
 .label-loop{
   position: fixed;
-  width: 100vw;
+  width: 100%;
   height: 100px;
   bottom: 60px;
   z-index: -5;
@@ -642,7 +642,7 @@ header,h2,text,.menu-nav{
 }
 /* 表示領域 */
 .label-loop-inview{
-  width: 100vw;
+  width: 100%;
   height: 100px;
   overflow: visible;
 }  
